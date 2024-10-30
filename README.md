@@ -3,6 +3,10 @@
 **I have started learning RedHat linux commands. I will update weekly report below**
 
 **Week-1**
+1.
+2.d
+3. t
+4. h
 
 1 uname : To check OS
   2 uname -r : to check OS version 
