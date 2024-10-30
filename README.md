@@ -85,7 +85,12 @@
 40 cp file1.txt to /var : duplicate file will be created under /var folder
 
 41 cp file1.txt to /var/file2.txt : duplicate file will be created in var directory with name file2.txt
+
 42 mv : used to move/rename the file/directory to different location
+
 43 mv file1 file2 : file1 will be renamed as file2
+
 44 mv file1 /var/xyz : file1 will be moved to xyz directory
+
 45 mv abc /var/xyz : abc directory will be moved inside xyz directory
+
