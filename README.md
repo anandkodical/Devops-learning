@@ -8,6 +8,7 @@
   2 uname -r : to check OS version 
   3 uname -m : to check whether 32 bit or 64 bit
   4 uname -a : to check all details
+  
 5 uptime :to check uptime - from how many time server is running
 6 who :to check how many users are accessing the server at this moment
 7 whoami :to check the username you have logged into server
