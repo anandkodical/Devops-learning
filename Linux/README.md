@@ -98,7 +98,7 @@ Week-1
 
 47 rmdir -r <directory> : To delete the directory
 
-48 ls -ltr t1.txt : to print t1.txt
+48 ls -ltr t1.txt : to print t1.txt if exist
 
 49 ls -ltr p[0-9] : Print files which starts with p and next having the numbers from 0-9
 
@@ -108,6 +108,6 @@ Week-1
 
 52 wc -w t1.txt : To print word count of t1.txt
 
-53. wc -c t1.txt : To print tottal number of character in file t1.txt
+53 wc -c t1.txt : To print tottal number of character in file t1.txt
 
 
