@@ -93,3 +93,21 @@ Week-1
 44 mv file1 /var/xyz : file1 will be moved to xyz directory
 
 45 mv abc /var/xyz : abc directory will be moved inside xyz directory
+
+46 rm <filename> : Used to delete the file
+
+47 rmdir -r <directory> : To delete the directory
+
+48 ls -ltr t1.txt : to print t1.txt
+
+49 ls -ltr p[0-9] : Print files which starts with p and next having the numbers from 0-9
+
+50 ls -ltr p[0-9a-z] : Print files starts with p and net character from 0-9 and any character
+
+51 wc -l t1.txt : To print the line numbers of t1.txt
+
+52 wc -w t1.txt : To print word count of t1.txt
+
+53. wc -c t1.txt : To print tottal number of character in file t1.txt
+
+
