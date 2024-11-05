@@ -110,4 +110,12 @@ Week-1
 
 53 wc -c t1.txt : To print tottal number of character in file t1.txt
 
+54 echo "Hello" : Used to print the output in terminal
+
+55 echo "Good morning" > f1.txt : To save message in f1.txt file (this will overwrite the file if already exists)
+
+56 echo "Good morning" >> f2.txt : Used to append the string to the file.
+
+57 
+
 
