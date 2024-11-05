@@ -116,6 +116,12 @@ Week-1
 
 56 echo "Good morning" >> f2.txt : Used to append the string to the file.
 
-57 
+57 echo $? :To check whether previous command got executed properly or not
+
+58 head f1.txt :to print first 10 lines of the file
+
+59 tail f2.txt :To print bottom 10 lines of the file - can mention number of lines to print the specified lines
+
+
 
 
