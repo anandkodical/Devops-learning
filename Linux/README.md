@@ -1,8 +1,8 @@
-Linux-for-Devops
+**Linux-for-Devops**
 
 I have started learning RedHat linux commands. I will update weekly report below.
 
-Week-1
+**Week-1**
 
 1 uname : To check OS
 
