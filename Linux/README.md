@@ -122,6 +122,24 @@ Week-1
 
 59 tail f2.txt :To print bottom 10 lines of the file - can mention number of lines to print the specified lines
 
+60 sort file1.txt	: To sort file in assending order based on the character
 
+61 sort -n file1.txt	: Sort file based on the numerical value
+
+62 sort -r file1.txt	: sort in reverse order
+
+63 uniq	: to show only uniq values (uniq will always used along with sort. without sort uniq will not work)
+
+64 sort file1.txt | uniq -c	: to display count of the values repeated
+
+65 sort file1.txt | uniq -d	: sort and display only duplicate values
+
+66 sort -k1 -n file1.txt 	: to sort the values based on the coulmn values
+
+67 last	: to know when was the linux OS installed and login and logout logs from the date of installation
+
+68 last | grep reboot	: to display the rows when the server was rebooted
+
+69 last | grep anand	: to display the login log of the specific user
 
 
