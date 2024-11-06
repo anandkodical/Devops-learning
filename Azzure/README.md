@@ -10,7 +10,19 @@
 
       2. CLick on 'Virtual machines' under Azure services section.
 
-      ![image](https://github.com/user-attachments/assets/fb518b11-2245-408b-bafc-076232ccb175)
+      3. Click on 'Create' -> 'Azure Virtual machine'.
+
+      4. Make sure 'Subscription' selected as 'Free'.  Now create a new resource group.
+
+      5. Provide Virtual machine name, Region, Image, Size, Authentication type, Username and click next. 
+
+      6. Select disk type and click next.
+
+      7. Now select relavent options in Networking, Management, Monitoring, Advanced and Tags section and click on create.
+
+Now the virtual machine instance will be created and deployed within few minutes.
+
+
 
 
 
