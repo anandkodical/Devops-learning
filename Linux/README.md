@@ -144,4 +144,22 @@ I have started learning RedHat linux commands. I will update weekly report below
 
     69 last | grep anand	: to display the login log of the specific user
 
+    70 cat /proc/cpuinfo | grep processor : to display how many processor are present. starts from 0.
+
+    71 ps axo %cpu,%mem,pid,S,user, command | sort k1 -nr|head : To display top 10 cup usage processors
+
+    72 grep error messages : To get the error lines from the file messages file
+
+    73. grep error dmesg : to get the error codes from dmseg file
+
+    74 tail secure : to get the last 10 lines from the secure file
+
+    75 cat boot.log : to display content from the boot log (used to identify the processes which are started when boot)
+
+    76 useradd anandk : to create a new user called anandk
+
+    77 passwd anandk : to set password for user anandk (can check /etc/shadow whether password is present or not)
+
+    78 which uptime : to know where the command uptime is stored (all commands will be saved under bin, sbin, /usr/bin, /usr/sbin only
+
 
