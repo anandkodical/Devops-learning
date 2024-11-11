@@ -164,7 +164,7 @@ I have started learning RedHat linux commands. I will update weekly report below
 
 **Week-03**
 
-    **Linux File Structure**
+**Linux File Structure**
 
     1. /etc :- Includes system configuration files. This includes passwd, shadow directories
 
