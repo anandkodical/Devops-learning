@@ -162,4 +162,32 @@ I have started learning RedHat linux commands. I will update weekly report below
 
     78 which uptime : to know where the command uptime is stored (all commands will be saved under bin, sbin, /usr/bin, /usr/sbin only
 
+**Week-03**
+
+    **Linux File Structure**
+
+    1. /etc :- Includes system configuration files. This includes passwd, shadow directories
+
+    2. /bin :- Includes all common command executable files.
+
+    3. /home :- contains personal directories of all users.
+
+    4. /root :- It's the home direcoties of root user.
+
+    5. /var :- Where logs and databases are stored.
+
+            a. /var/log/cron : Cronjob logs will be saved.
+
+            b. /var/log/secure : All user authentication logs will be there.
+
+            c. /var/log/messages : General OS related logs will be written here.
+
+            d. /var/log/dmesg : logs related to external applications will be saved.
+
+            e. /var/log/boot.log : Checked whether all processes got started while boot so that we can troubleshoot if any issues.
+
+    6. /tmp :- All temporary files created by all users will be saved.
+
+    7. /dev : Contains device information files such as HDD, sound devices etc.
+
 
