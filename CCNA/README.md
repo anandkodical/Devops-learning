@@ -49,7 +49,36 @@ Quick formatting: Only data will be erased.
 
 Normal format :Data will be erased along with the sectors and tracks.
 
-MBR :
+MBR : Master Boot Record 
+
+  It's a methodology of partition. It contains the information such as,
+
+      Data capacity
+
+      Size of partition
+
+      OS partition
+
+      It has 512 byte size
+
+      This will be selected by the OS since it can manage upto 2TB of disk.
+
+      Not flexible and can make only maximum of 4 partition
+
+GPT : GUID Partition Table
+
+    This is having 512 byte size
+
+    Can make upto 128 partition since it can handle more than 2TB
+
+    This methodology is used nowadays
+
+**Networking**
+
+What is networking : Group of 2 or more computers.
+
+
+  
 
 GPT : 
 
