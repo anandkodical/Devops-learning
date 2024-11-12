@@ -24,3 +24,35 @@ Set of instructions that are used to interacts with hardware device as per users
 
     2. **Client Operating system** : A client operating system is software that runs on personal computers or devices that people use to access information and applications from a server. It's designed for everyday tasks, like browsing the internet, creating documents, playing games, and running apps. Examples include Windows, macOS, Android, and iOS.
 
+In Server OS, web services will come along with the server which is called as IIS and in linux it's knpwn as Apache. softwares in linux called as packages.
+
+**Memory**
+
+There are 2 types of memory.
+
+  1. Primary/Volatile memory : These are faster in speed but low in capacity. Ex: RAM and ROM
+
+  2. Secondary/non volatile memory : These are large capacity but slow in speed. Ex: HDD, USB etc
+
+Components of HDD : Platter, Actuator, Actuator arm, read/write head, Spindle, Power cable, jumper.
+
+
+**Formatting :-**
+
+There are 2 types of formatting.
+
+  1. Low level formatting : These are predefined by the manufacturer. Ex : Pendrive, memory cards
+
+  2. High level formatting: Can customize as per the user requirements. Ex: HDD
+
+Quick formatting: Only data will be erased.
+
+Normal format :Data will be erased along with the sectors and tracks.
+
+MBR :
+
+GPT : 
+
+
+
+
