@@ -10,7 +10,7 @@ Select Free trail while creating account which will not cost.
 
       2. Click on 'Virtual machines' and select Create Virtual machine.
 
-         ![image](https://github.com/user-attachments/assets/e8285b31-a4a8-46c4-8e0e-4e531aed13fd)
+   ![image](https://github.com/user-attachments/assets/e8285b31-a4a8-46c4-8e0e-4e531aed13fd)
 
 
       4. Make sure 'Subscription' selected as 'Free'.  Now create a new resource group.
