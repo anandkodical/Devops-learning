@@ -182,7 +182,7 @@ I have started learning RedHat linux commands. I will update weekly report below
 
             c. /var/log/messages : General OS related logs will be written here.
 
-            d. /var/log/dmesg : logs related to external applications will be saved.
+            d. /var/log/dmesg : logs related to external devices will be saved. Ex: Mouse, keyboard
 
             e. /var/log/boot.log : Checked whether all processes got started while boot so that we can troubleshoot if any issues.
 
