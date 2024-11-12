@@ -143,11 +143,11 @@ Twisted pair cables.
 
 **Types of cables:-**
 
-**Straight through cables**
+**1. Straight through cables**
 
 These cables are used to connect the straight devices such as switches=>Router=>Computer. The color combinations is given below.
 
-    Side A                        Side B
+    **Side A**                        **Side B**
 
     1. white-orange                1. White orange
 
@@ -159,13 +159,60 @@ These cables are used to connect the straight devices such as switches=>Router=>
 
     5. White blue                  5. White blue
 
-    6. Green                        6. Green
+    6. Green                       6. Green
 
-    7. White brown                  7. White brown
+    7. White brown                 7. White brown
 
-    8. Brown                        8. Brown
+    8. Brown                       8. Brown
 
 In this connection both sides of the cables which are connected using the RJ-45 connector will be same color combination.
+
+
+**2. Cross over cables:-**
+
+These cables are used to connect the similar or same devices. Ex: Router to router, computer to computer. The color combination is given below.
+
+**Side A**                        **Side B**
+
+    1. white-orange                1. White green
+
+    2. Orange                      2. Green
+
+    3. White green                 3. White orange
+
+    4. Blue                        4. Blue
+
+    5. White blue                  5. White blue
+
+    6. Green                       6. Orange
+
+    7. White brown                 7. White brown
+
+    8. Brown                       8. Brown
+
+
+**3. Roll over cables:-**
+
+These types of cables are used in console cables. COlor combination is given as follows.
+
+**Side A**                        **Side B**
+
+    1. white-orange                1. Brown
+
+    2. Orange                      2. White brown
+
+    3. White green                 3. Green
+
+    4. Blue                        4. White blue
+
+    5. White blue                  5. Blue
+
+    6. Green                       6. WHite green
+
+    7. White brown                 7. Orange
+
+    8. Brown                       8. White orange
+
 
 
 
