@@ -50,6 +50,9 @@ For SSH public key source, leave the default of Generate new key pair, and then 
 Now the virtual machine instance will be created and deployed within few minutes.
 
 
+![image](https://github.com/user-attachments/assets/0aee2778-6aa3-4dcb-9471-b5bc6450abdc)
+
+
 
 
 
