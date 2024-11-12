@@ -172,7 +172,7 @@ In this connection both sides of the cables which are connected using the RJ-45 
 
 These cables are used to connect the similar or same devices. Ex: Router to router, computer to computer. The color combination is given below.
 
-**Side A**                        **Side B**
+    **Side A**                        **Side B**
 
     1. white-orange                1. White green
 
@@ -195,7 +195,7 @@ These cables are used to connect the similar or same devices. Ex: Router to rout
 
 These types of cables are used in console cables. COlor combination is given as follows.
 
-**Side A**                        **Side B**
+    **Side A**                        **Side B**
 
     1. white-orange                1. Brown
 
@@ -213,6 +213,10 @@ These types of cables are used in console cables. COlor combination is given as 
 
     8. Brown                       8. White orange
 
+
+**Orange color**: Used to transmit the data
+
+**Green color**: Used to receive data
 
 
 
