@@ -75,12 +75,98 @@ GPT : GUID Partition Table
 
 **Networking**
 
-What is networking : Group of 2 or more computers.
+  Networking is group of 2 or more computers.
+
+  Connected using transmission media with wires or wireless.
+
+  Used to share the resources like files, folders and other data.
+
+  **Types of networking:-**
+
+      1. LAN (Local Area Network) 
+
+      2. MAN (Metropolitan Area Network)
+
+      3. WAN (Wide Area Network)
+
+      4. CAN (Campus Area Network)
+
+      5. PAN (Personal Area Network)
+
+  **Types of network access :-**
+
+    1. WorkGroup : No centralazed control such as personal computer or laptop.
+
+    2. Domain based : This is managed by the centralized control such as organization or office network.
+
+Authentication : Identify the user identity
+
+Authorization : Network/device access.
 
 
-  
+**Types of cables:-**
 
-GPT : 
+  1. Twisted pair cable : This is called as copper cable which is used to transmit the data.
+
+  2. Co-axial cable: These are high thinkness cables which is used in TV
+
+  3. Fibre optic cable : These are costly when compared to other cables which are transmitting light signals.
+
+
+Twisted pair cables.
+
+    - Have 4 color pairs
+
+    - Orange, Green, Blue and brown
+
+    - ABove 4 colors will be in combination as white/orange, orange, white/green, green, white/brown, brown, white/blue, blue
+
+    - These are used in LAN cables along with the RJ-45 connector (8 pin).
+
+    - 4 pin cables are used in old landline phones using RJ-11 connector.
+
+
+**Tools needed for crimping**
+
+  1. Cable
+
+  2. RJ-45 connector
+
+  3. crimping tool
+
+  4. Wire cutter
+
+  5. Cabke tester
+
+  6. Understanding of connectivity
+
+
+**Types of cables:-**
+
+**Straight through cables**
+
+These cables are used to connect the straight devices such as switches=>Router=>Computer. The color combinations is given below.
+
+    Side A                        Side B
+
+    1. white-orange                1. White orange
+
+    2. Orange                      2. Orange
+
+    3. White green                 3. WHite green
+
+    4. Blue                        4. Blue
+
+    5. White blue                  5. White blue
+
+    6. Green                        6. Green
+
+    7. White brown                  7. White brown
+
+    8. Brown                        8. Brown
+
+In this connection both sides of the cables which are connected using the RJ-45 connector will be same color combination.
+
 
 
 
