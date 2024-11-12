@@ -146,9 +146,9 @@ I have started learning RedHat linux commands. I will update weekly report below
 
     70 cat /proc/cpuinfo | grep processor : to display how many processor are present. starts from 0.
 
-    71 ps axo %cpu,%mem,pid,S,user, command | sort k1 -nr|head : To display top 10 cup usage processors
+    71 ps axo %cpu,%mem,pid,S,user, command | sort k1 -nr|head : To display top 10 CPU usage processors
 
-    72 grep error messages : To get the error lines from the file messages file
+    72 grep error messages : To get the error lines from the messages file
 
     73. grep error dmesg : to get the error codes from dmseg file
 
@@ -186,7 +186,7 @@ I have started learning RedHat linux commands. I will update weekly report below
 
             e. /var/log/boot.log : Checked whether all processes got started while boot so that we can troubleshoot if any issues.
 
-    6. /tmp :- All temporary files created by all users will be saved.
+    6. /tmp :- All temporary files created by all users will be saved and accessible to everyone. Therefore, important files or information should not be saved in this directory.
 
     7. /dev : Contains device information files such as HDD, sound devices etc.
 
