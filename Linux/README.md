@@ -204,13 +204,20 @@ I have started learning RedHat linux commands. I will update weekly report below
 
 This is like a safe mode in windows. If any critical errors occure and we are unable to login to server then we can login as single user mode and make the changes to server. If root user forgot password then we can reset in single user mode.
 
-There are 0-6 runlevels	
+There are 0-6 runlevels
+
     0 ==> Halt (shutdown) ==> Should not use this mode otherwise server will get shutdown when turned on
-    1 ==>single user mode	can edit in this mode
-    2 ==>multi user mode	
+    
+    1 ==>single user mode ==>can edit in this mode
+    
+    2 ==>multi user mode
+    
     3 ==>CLI mode. Putty or mobax
-    4 ==>not used	
+    
+    4 ==>not used
+    
     5 ==>GUI mode with multiple user. Ex VMWare
+    
     6 ==>reboot	==> Should not use this mode otherwise server will go to reboot loop
 	
 We can make the runlavels under /etc/inittab file. Also, can check the current runlevel using who -r command	
@@ -219,19 +226,33 @@ We can make the runlavels under /etc/inittab file. Also, can check the current r
 **VIM Editor**	
 	
 :16 <enter>	: To go to 16th line
+
 :$ <enter>	: To got to last line of the file
+
 :1 <enter>	: Go to first line of the file
+
 <esc> dd : to delete the specific line where the cursour is there
+
 <esc> 5dd : to delete next 5 lines from where cursor is there now
+
 :%s/praveen/anand/g	: to replace praveen with anand globally
+
 :%s/praveen/anand : to replace first occurence of praveen with anand in each line
+
 :17s/praveen/anand : replace first praveen with anand on line 17 only
+
 :10,15s/praveen/anand/g	: replace praveen with anand from line no 10 to 15
+
 :17s/praveen/anand/g : replace all praveen with anand on line 17 only
+
 :%s/^/anand	: to add anand in starting of all lines
+
 :%s/$/anand	: to append anand in all lines at the end
+
 :u	: to undo the chnages done
+
 :q!	: quit without saving the file
+
 :wq! : save and quit the file
 
 
