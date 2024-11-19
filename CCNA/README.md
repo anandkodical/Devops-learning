@@ -219,6 +219,86 @@ These types of cables are used in console cables. COlor combination is given as 
 **Green color**: Used to receive data
 
 
+**ROUTER**:-  The main difference here is that a L3 switch can not perform external routing , whereas a router is the only device that is capable of performing external routing.
 
+**ROUTING**:-  PERFORMING NETWORK COMMUNICATION BETWEEN DIFFERENT NETWORK.
 
+ **L3**:- is capable of performing internal routing .
 
+**IP Address - Internet Protocol**
+
+Protocol - Set of rules which enables us to communicate on a network.
+Intranet - Same network (communication)
+Internet - Different network
+
+**IP version 4**
+
+32 - bit Address
+Numeric / decimal value (0 to 9)
+Total IPs = 2 ^ 32
+IP is divided into 4 Octet
+It consists of 8 bits per Octet
+Separated by Dotted notation
+Subnetting is possible
+Shortage of IP’s
+
+**IP version 6**
+
+128 bit address
+Alphanumeric / Hexadecimal value (0 to9, A to F, where A is 10 & F is 15)
+Total IP’s = 2 ^ 128
+IP is divided into 8 Octets
+It consists of 16 bits per Octet
+Separated by Colon :
+Subnetting is not required
+Infinite IP’s
+
+**Classes of IP Address:**   
+
+  1. Class A - Large Network ( 3K to 5K IPs)  ( 0 - 127 )
+  2. Class B - Medium Size ( 1k to 2K IPs)  ( 128 - 191 )
+  3. Class C - Small Size (500 to 1000)  ( 192 - 223 )
+  4. Class D - Multicast 	( 224 - 239 )
+  5. Class E - Research & Development ( 240 - 255 )
+
+**Cast:**
+
+    Unicast - one to one
+    
+    Broadcast - one to all
+    
+    Multicast - one to many (first used by US Defense)
+ 
+**Ranges of IP:**
+
+    Class A - 0 to 127
+    
+    Class B - 128 to 191
+    
+    Class C - 192 to 223
+    
+    Class D - 224 to 239
+    
+    Class E - 240 to 255
+
+**Public IP address (WAN NETWORK)**
+
+  CLASS A   : 1.0.0.0 TO 9.255.255.255
+   (0 to 127)     11.0.0.0 TO 126.255.255.255
+  Loopback range : 127.0.0.0 to 127.255.255.255
+
+  CLASS B    : 128.0.0.0 TO 172.15.255.255
+    (128 to 191)   172.32.0.0 TO 191.255.255.255
+
+  CLASS C     : 192.0.0.0 TO 192.167.255.255
+    (192 to 223)    192.169.0.0 TO 223.255.255.255
+
+**Private IP address (Local Network)**
+
+    Class A : 10.0.0.0 to 10.255.255.255
+    
+    Class B : 172.16.0.0 to 172.31.255.255
+    
+    Class C : 192.168.0.0 to 192.168.255.255
+    
+    Loopback range : 127.0.0.0 to 127.255.255.255
