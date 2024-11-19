@@ -280,6 +280,7 @@ Infinite IP’s
     Class D - 224 to 239
     
     Class E - 240 to 255
+    
 
 **Public IP address (WAN NETWORK)**
 
@@ -294,6 +295,7 @@ Infinite IP’s
 
   CLASS C     : 192.0.0.0 TO 192.167.255.255
     (192 to 223)    192.169.0.0 TO 223.255.255.255
+    
 
 **Private IP address (Local Network)**
 
