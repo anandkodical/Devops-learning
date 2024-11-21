@@ -308,35 +308,42 @@ Infinite IP’s
     Loopback range : 127.0.0.0 to 127.255.255.255
 
 
-Syntax of IP address:
-Network address + host address
-An IP address is always a combination of network address and host address, where network address is used to identify the entire network & host address is used to identify the individual device on the network.
+**Syntax of IP address:**
 
-Syntax of IP with respect to the classes of IP:
-Class A : Network.host.host.host
-Class B : Network.network.host.host
-Class C: Network.network.network.host
+==> Network address + host address
 
-Subnetting:
+==> An IP address is always a combination of network address and host address, where network address is used to identify the entire network & host address is used to identify the individual device on the network.
+
+**Syntax of IP with respect to the classes of IP:**
+
+	Class A : Network.host.host.host
+ 
+	Class B : Network.network.host.host
+ 
+	Class C: Network.network.network.host
+
+**Subnetting:**
+
 Subnetting is a process of dividing a network into multiple smaller networks called subnets in order to minimize the wastage of IP addresses.
 
-Ex 1:  ABC Corporation
-LAN 1 - 50 IP address
-LAN 2 - 30
-LAN 3 - 70
-LAN 4 - 25
-LAN 5 - 110
+	Ex 1:  ABC Corporation
+	LAN 1 - 50 IP address
+	LAN 2 - 30
+	LAN 3 - 70
+	LAN 4 - 25
+	LAN 5 - 110
 
 IP address :192.168.1.0 - Class C 
 *LAN config should be done in a descending order
 *All LANs should be considered as diff networks
 
-Default subnet mask
-Class A - 255.0.0.0
-Class B - 255.255.0.0
-Class C - 255.255.255.0
+	Default subnet mask
+	Class A - 255.0.0.0
+	Class B - 255.255.0.0
+	Class C - 255.255.255.0
  
 DSM - 255.255.255.0 (0-255 =256)
+
 Without Subnetting:
 LAN 5 - 110 IPs
 Network Address - 192.168.1.0
@@ -361,7 +368,8 @@ Exponential values:
 2 ^ 0 =1
 Total 255
 
-With Subnetting:
+**With Subnetting:**
+
 192.168.1.0 Class C
 DSM - 255.255.255.0
 LAN5- 110
@@ -406,17 +414,17 @@ Class B - /16 to /23
 Class C - /24 to /30
 
 
-Ex 2:
-172.18.1.0 /19
-
-DSM : 255.255.0.0
-BDSM : 00000000. 00000000   
-Number of 1’s = /16
-Binary subnet mask : 11111111.11111111.11100000.00000000
-Subnet mask : 255.255.224.0
-Subnet : 2 ^ x = 2 ^ 3 = 8
-Block Size : 2 ^ n = 2 ^ 13 = 8192
-Hosts: (2 ^ n) - 2 = 8192 -2 = 8190
+	**Ex 2:**
+ 
+	172.18.1.0 /19
+	DSM : 255.255.0.0
+	BDSM : 00000000. 00000000   
+	Number of 1’s = /16
+	Binary subnet mask : 11111111.11111111.11100000.00000000
+	Subnet mask : 255.255.224.0
+	Subnet : 2 ^ x = 2 ^ 3 = 8
+	Block Size : 2 ^ n = 2 ^ 13 = 8192
+	Hosts: (2 ^ n) - 2 = 8192 -2 = 8190
 
 Block size should be lesser or equal to 256
 8192 / 256 = 32
@@ -427,13 +435,14 @@ Last IP = 172.18.1.30
 Broadcast value = 172.18.1.31
 
 
-Ex 3:
-100.100.100.0/15
-DSM : 255.0.0.0
-BSM : 11111111.11111110.00000000.00000000
-SM : 255.254.0.0
-Subnet: 2 ^ x = 2 ^ 7 = 128
-Block Size : 2 ^ n = 2 ^ 17 = 131072
-131072/256 = 512;  512/256 =2
-Hosts:131072 -2 = 131070
+	**Ex 3:**
+ 
+	100.100.100.0/15
+	DSM : 255.0.0.0
+	BSM : 11111111.11111110.00000000.00000000
+	SM : 255.254.0.0
+	Subnet: 2 ^ x = 2 ^ 7 = 128
+	Block Size : 2 ^ n = 2 ^ 17 = 131072
+	131072/256 = 512;  512/256 =2
+	Hosts:131072 -2 = 131070
 
