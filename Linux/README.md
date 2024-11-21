@@ -225,46 +225,46 @@ We can make the runlavels under /etc/inittab file. Also, can check the current r
 
 **VIM Editor**	
 	
-:16 <enter>	: To go to 16th line
+	:16 <enter>	: To go to 16th line
 
-:$ <enter>	: To got to last line of the file
+	:$ <enter>	: To got to last line of the file
 
-:1 <enter>	: Go to first line of the file
+	:1 <enter>	: Go to first line of the file
 
-<esc> dd : to delete the specific line where the cursour is there
+	<esc> dd : to delete the specific line where the cursour is there
 
-<esc> 5dd : to delete next 5 lines from where cursor is there now
+	<esc> 5dd : to delete next 5 lines from where cursor is there now
 
-:%s/praveen/anand/g	: to replace praveen with anand globally
+	:%s/praveen/anand/g	: to replace praveen with anand globally
 
-:%s/praveen/anand : to replace first occurence of praveen with anand in each line
+	:%s/praveen/anand : to replace first occurence of praveen with anand in each line
 
-:17s/praveen/anand : replace first praveen with anand on line 17 only
+	:17s/praveen/anand : replace first praveen with anand on line 17 only
 
-:10,15s/praveen/anand/g	: replace praveen with anand from line no 10 to 15
+	:10,15s/praveen/anand/g	: replace praveen with anand from line no 10 to 15
 
-:17s/praveen/anand/g : replace all praveen with anand on line 17 only
+	:17s/praveen/anand/g : replace all praveen with anand on line 17 only
 
-:%s/^/anand	: to add anand in starting of all lines
+	:%s/^/anand	: to add anand in starting of all lines
 
-:%s/$/anand	: to append anand in all lines at the end
+	:%s/$/anand	: to append anand in all lines at the end
 
-:%s/^$/anand : To delete the blank lines from the files
+	:%s/^$/anand : To delete the blank lines from the files
 
-:u	: to undo the chnages done
+	:u	: to undo the chnages done
 
-:q!	: quit without saving the file
+	:q!	: quit without saving the file
 
-:wq! : save and quit the file
+	:wq! : save and quit the file
 
 
 ****User Administration****
 
-Administrator User  ===> root ===> User ID will be 0
+	==> 1. Administrator User  ===> root ===> User ID will be 0
 
-System User ===> users that are created while OS installation, app installation or package installation  ===>User ID will be between 1-999 in Linux 6 and 500-1000 in linux 7
+	==> 2. System User ===> users that are created while OS installation, app installation or package installation  ===>User ID will be between 1-999 in Linux 6 and 500-1000 in linux 7
 
-Normal User ===> That are created by the root or other user ===> User ID between 1000 to 60000
+	==> 3. Normal User ===> That are created by the root or other user ===> User ID between 1000 to 60000
 
 
 
