@@ -266,8 +266,6 @@ We can make the runlavels under /etc/inittab file. Also, can check the current r
 
 	==> 3. Normal User ===> That are created by the root or other user ===> User ID between 1000 to 60000
 
-![image](https://github.com/user-attachments/assets/bb10b13b-030d-4703-9a89-647c5abdc170)
-
 
 **Adding User:-**
 
@@ -306,6 +304,18 @@ We can make the runlavels under /etc/inittab file. Also, can check the current r
  	usermod -c "Testing" nov21	(This is used to filter who all working under Testing dept)
 
   ![image](https://github.com/user-attachments/assets/d560469c-c308-49c0-8e3d-be0ca4e460df)
+
+
+  **To change home directory of the user**
+  
+  (If the Home directory is full then we can change the path of home directory to other path)
+
+  usermod -d /var/nov21 nov21	(Informing linux to chnage the home directory of nov21 user to /var/nov21)
+
+  ![image](https://github.com/user-attachments/assets/5dcfe914-f18b-41fe-9ab5-1f5513bee0c2)
+
+  
+
 
   
 
