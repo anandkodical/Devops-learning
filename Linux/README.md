@@ -267,27 +267,29 @@ We can make the runlavels under /etc/inittab file. Also, can check the current r
 	==> 3. Normal User ===> That are created by the root or other user ===> User ID between 1000 to 60000
 
 
- 	**Adding User:-**
+ **Adding User:-**
 
-  		useradd <nov21>
+  	useradd <nov21>
 
-    	**To confirm user creation**
+    **To confirm user creation**
 
-     		cat /etc/passwd | grep <nov21>    (This will display the user row which is created now)
+     	cat /etc/passwd | grep <nov21>    (This will display the user row which is created now)
 
-       		![image](https://github.com/user-attachments/assets/8db15330-c526-453e-8c74-e2bc5e73198a)
+![image](https://github.com/user-attachments/assets/8db15330-c526-453e-8c74-e2bc5e73198a)
 
-  	**To check whether password is set for the user**
 
-   		cat /etc/shadow		(This will confirm whether password is set for the user. If password is set the second column will contain encrypted password)
+  **To check whether password is set for the user**
 
-     		![image](https://github.com/user-attachments/assets/f8823f8a-24b5-4ed2-894c-5163819e4aa5)
+   	cat /etc/shadow		(This will confirm whether password is set for the user. If password is set the second column will contain encrypted password)
 
-       **To change User ID for the user**
+![image](https://github.com/user-attachments/assets/f8823f8a-24b5-4ed2-894c-5163819e4aa5)
 
-       usermod -u 650 nov21	(This will assign the User ID 650 to the user nov21)
 
-       ![image](https://github.com/user-attachments/assets/8dd85067-bf12-483c-b27e-8072c22f892d)
+**To change User ID for the user**
+
+	usermod -u 650 nov21	(This will assign the User ID 650 to the user nov21)
+
+![image](https://github.com/user-attachments/assets/8dd85067-bf12-483c-b27e-8072c22f892d)
 
 
 
