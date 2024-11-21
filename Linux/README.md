@@ -310,7 +310,7 @@ We can make the runlavels under /etc/inittab file. Also, can check the current r
   
   (If the Home directory is full then we can change the path of home directory to other path)
 
-  usermod -d /var/nov21 nov21	(Informing linux to change the home directory of nov21 user to /var/nov21)
+  	usermod -d /var/nov21 nov21	(Informing linux to change the home directory of nov21 user to /var/nov21)
 
   ![image](https://github.com/user-attachments/assets/5dcfe914-f18b-41fe-9ab5-1f5513bee0c2)
 
