@@ -168,11 +168,11 @@ I have started learning RedHat linux commands. I will update weekly report below
     
     81 cat mounts : To know the partition details of the server (same as df output)
     
-    82 dmidecode : To know all physical information on server. Like processor, serial number of the server, manufacturar, RAM partition using the command options
+    82 dmidecode : To know all physical information on server. Like processor, serial number of the server, Manufacturer, RAM partition using the command options
     
     83 dmidecode -t memory|more	: To know the RAM details along with memory slots
     
-    84 dmidecode -t processor|more : To know processor type, manufaturer, version etc
+    84 dmidecode -t processor|more : To know processor type, Manufacturer, version etc
 
 **Week-03**
 
