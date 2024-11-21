@@ -266,19 +266,21 @@ We can make the runlavels under /etc/inittab file. Also, can check the current r
 
 	==> 3. Normal User ===> That are created by the root or other user ===> User ID between 1000 to 60000
 
+![image](https://github.com/user-attachments/assets/bb10b13b-030d-4703-9a89-647c5abdc170)
 
- **Adding User:-**
 
-  	useradd <nov21>
+**Adding User:-**
 
-    **To confirm user creation**
+  	useradd <nov21>  (User nov21 will be created)
 
-     	cat /etc/passwd | grep <nov21>    (This will display the user row which is created now)
+**To confirm user creation**
+
+     	cat /etc/passwd | grep <nov21>	(This will display the user row which is created now)
 
 ![image](https://github.com/user-attachments/assets/8db15330-c526-453e-8c74-e2bc5e73198a)
 
 
-  **To check whether password is set for the user**
+**To check whether password is set for the user**
 
    	cat /etc/shadow		(This will confirm whether password is set for the user. If password is set the second column will contain encrypted password)
 
@@ -290,6 +292,25 @@ We can make the runlavels under /etc/inittab file. Also, can check the current r
 	usermod -u 650 nov21	(This will assign the User ID 650 to the user nov21)
 
 ![image](https://github.com/user-attachments/assets/8dd85067-bf12-483c-b27e-8072c22f892d)
+
+
+**To change Group ID for the user**
+
+	groupmod -g 700 nov21	(To change group ID)
+
+ ![image](https://github.com/user-attachments/assets/5148b397-5998-413f-91c1-a0aa90751db0)
+
+
+ **To modify the description of the existing user**
+
+ 	usermod -c "Testing" nov21	(This is used to filter who all working under Testing dept)
+
+  ![image](https://github.com/user-attachments/assets/d560469c-c308-49c0-8e3d-be0ca4e460df)
+
+  
+
+
+  
 
 
 
