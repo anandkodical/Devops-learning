@@ -249,11 +249,26 @@ We can make the runlavels under /etc/inittab file. Also, can check the current r
 
 :%s/$/anand	: to append anand in all lines at the end
 
+:%s/^$/anand : To delete the blank lines from the files
+
 :u	: to undo the chnages done
 
 :q!	: quit without saving the file
 
 :wq! : save and quit the file
+
+
+****User Administration****
+
+Administrator User  ===> root ===> User ID will be 0
+
+System User ===> users that are created while OS installation, app installation or package installation  ===>User ID will be between 1-999 in Linux 6 and 500-1000 in linux 7
+
+Normal User ===> That are created by the root or other user ===> User ID between 1000 to 60000
+
+
+
+
 
 
 
