@@ -306,3 +306,134 @@ Infinite IP’s
     Class C : 192.168.0.0 to 192.168.255.255
     
     Loopback range : 127.0.0.0 to 127.255.255.255
+
+
+Syntax of IP address:
+Network address + host address
+An IP address is always a combination of network address and host address, where network address is used to identify the entire network & host address is used to identify the individual device on the network.
+
+Syntax of IP with respect to the classes of IP:
+Class A : Network.host.host.host
+Class B : Network.network.host.host
+Class C: Network.network.network.host
+
+Subnetting:
+Subnetting is a process of dividing a network into multiple smaller networks called subnets in order to minimize the wastage of IP addresses.
+
+Ex 1:  ABC Corporation
+LAN 1 - 50 IP address
+LAN 2 - 30
+LAN 3 - 70
+LAN 4 - 25
+LAN 5 - 110
+
+IP address :192.168.1.0 - Class C 
+*LAN config should be done in a descending order
+*All LANs should be considered as diff networks
+
+Default subnet mask
+Class A - 255.0.0.0
+Class B - 255.255.0.0
+Class C - 255.255.255.0
+ 
+DSM - 255.255.255.0 (0-255 =256)
+Without Subnetting:
+LAN 5 - 110 IPs
+Network Address - 192.168.1.0
+DSM - 255.255.255.0
+1st IP - 192.168.1.1     |   Last IP - 192.168.1.110
+(256 - 110 = 146    Wastage)
+Network.Network.Network.Host
+
+LAN 3 - 70
+Network ID - 192.168.2.0
+1st IP - 192.168.2.1       |   Last IP - 192.168.2.70
+(256 - 70 - 186 Wastage)
+
+Exponential values:
+2 ^ 7 = 128
+2 ^ 6 = 64
+2 ^ 5 = 32
+2 ^ 4 = 16
+2 ^ 3 = 8
+2 ^ 2 = 4
+2 ^ 1 =2
+2 ^ 0 =1
+Total 255
+
+With Subnetting:
+192.168.1.0 Class C
+DSM - 255.255.255.0
+LAN5- 110
+Convert the DSM into Binary :
+11111111.11111111.11111111.00000000
+	Number of 1’s = /24 -----DSM
+Consider the host ID - 00000000
+Find the magic bit (single bit that provides the required IPs) : 2 ^ 7 = 128
+Binary subnet mask for this network :
+	11111111.11111111.11111111.10000000
+ 			(magic bit 0 change to 1)
+Subnet mask : 255.255.255.128 for LAN 5
+
+Network ID : 192.168.1.0 - Class C
+Subnet mask for LAN 5 - 255.255.255.128   can be represented with a value /25, value is called as CIDR (Classless Interdomain Routing)
+
+Subnet : 2 ^ x = 2 ^ 1= 2 ( x = number of 1’s in host ID)
+Blocksize : 2 ^ n = 2 ^ 7=128 (n = number of 0’s in host ID)
+Hosts : (2 ^ n) -2 = (2 ^ 7) - 2 = 126 (IPs can b used validly)
+
+Binary Subnet Mask : 11111111.11111111.11111111.10000000
+Number of 1’s = 25
+
+0 Network :
+LAN 5 =110
+NW ID - 192.168.1.0
+1st IP - 192.168.1.1
+Last IP - 192.168.1.126
+Broadcast IP  - 192.168.1.127
+
+128 Network: 
+LAN 3 = 70
+NW ID - 192.168.1.128
+1st IP - 192.168.1.129
+Last IP - 192.168.1.254
+Broadcast IP  - 192.168.1.255
+
+
+DSM : 
+Class A - /8 to /15
+Class B - /16 to /23
+Class C - /24 to /30
+
+
+Ex 2:
+172.18.1.0 /19
+
+DSM : 255.255.0.0
+BDSM : 00000000. 00000000   
+Number of 1’s = /16
+Binary subnet mask : 11111111.11111111.11100000.00000000
+Subnet mask : 255.255.224.0
+Subnet : 2 ^ x = 2 ^ 3 = 8
+Block Size : 2 ^ n = 2 ^ 13 = 8192
+Hosts: (2 ^ n) - 2 = 8192 -2 = 8190
+
+Block size should be lesser or equal to 256
+8192 / 256 = 32
+Subnet IDs ( 0,32,64,96,128,160,192,224)
+Network ID = 172.18.1.0
+1st IP = 172.18.1.1
+Last IP = 172.18.1.30
+Broadcast value = 172.18.1.31
+
+
+Ex 3:
+100.100.100.0/15
+DSM : 255.0.0.0
+BSM : 11111111.11111110.00000000.00000000
+SM : 255.254.0.0
+Subnet: 2 ^ x = 2 ^ 7 = 128
+Block Size : 2 ^ n = 2 ^ 17 = 131072
+131072/256 = 512;  512/256 =2
+Hosts:131072 -2 = 131070
+
