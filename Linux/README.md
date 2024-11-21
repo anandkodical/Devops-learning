@@ -280,7 +280,7 @@ We can make the runlavels under /etc/inittab file. Also, can check the current r
 
 **To check whether password is set for the user**
 
-   	cat /etc/shadow		(This will confirm whether password is set for the user. If password is set the second column will contain encrypted password)
+   	cat /etc/shadow		(This will confirm whether password is set for the user. If set the encrypted password will be shown, else !! will be shown. Also, password will be shown as X in the passwd file)
 
 ![image](https://github.com/user-attachments/assets/f8823f8a-24b5-4ed2-894c-5163819e4aa5)
 
@@ -310,7 +310,7 @@ We can make the runlavels under /etc/inittab file. Also, can check the current r
   
   (If the Home directory is full then we can change the path of home directory to other path)
 
-  usermod -d /var/nov21 nov21	(Informing linux to chnage the home directory of nov21 user to /var/nov21)
+  usermod -d /var/nov21 nov21	(Informing linux to change the home directory of nov21 user to /var/nov21)
 
   ![image](https://github.com/user-attachments/assets/5dcfe914-f18b-41fe-9ab5-1f5513bee0c2)
 
