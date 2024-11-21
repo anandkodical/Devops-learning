@@ -358,14 +358,23 @@ Network ID - 192.168.2.0
 (256 - 70 - 186 Wastage)
 
 Exponential values:
+
 2 ^ 7 = 128
+
 2 ^ 6 = 64
+
 2 ^ 5 = 32
+
 2 ^ 4 = 16
+
 2 ^ 3 = 8
+
 2 ^ 2 = 4
+
 2 ^ 1 =2
+
 2 ^ 0 =1
+
 Total 255
 
 **With Subnetting:**
