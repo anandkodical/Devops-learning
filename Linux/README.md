@@ -267,6 +267,9 @@ We can make the runlavels under /etc/inittab file. Also, can check the current r
 	==> 3. Normal User ===> That are created by the root or other user ===> User ID between 1000 to 60000
 
 
+ 	**Adding User:-**
+
+
 
 
 
