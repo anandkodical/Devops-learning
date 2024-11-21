@@ -344,13 +344,13 @@ IP address :192.168.1.0 - Class C
  
 DSM - 255.255.255.0 (0-255 =256)
 
-Without Subnetting:
-LAN 5 - 110 IPs
-Network Address - 192.168.1.0
-DSM - 255.255.255.0
-1st IP - 192.168.1.1     |   Last IP - 192.168.1.110
-(256 - 110 = 146    Wastage)
-Network.Network.Network.Host
+	Without Subnetting:
+	LAN 5 - 110 IPs
+	Network Address - 192.168.1.0
+	DSM - 255.255.255.0
+	1st IP - 192.168.1.1     |   Last IP - 192.168.1.110
+	(256 - 110 = 146    Wastage)
+	Network.Network.Network.Host
 
 LAN 3 - 70
 Network ID - 192.168.2.0
@@ -370,28 +370,28 @@ Total 255
 
 **With Subnetting:**
 
-192.168.1.0 Class C
-DSM - 255.255.255.0
-LAN5- 110
-Convert the DSM into Binary :
-11111111.11111111.11111111.00000000
-	Number of 1’s = /24 -----DSM
-Consider the host ID - 00000000
-Find the magic bit (single bit that provides the required IPs) : 2 ^ 7 = 128
-Binary subnet mask for this network :
-	11111111.11111111.11111111.10000000
- 			(magic bit 0 change to 1)
-Subnet mask : 255.255.255.128 for LAN 5
+	192.168.1.0 Class C
+	DSM - 255.255.255.0
+	LAN5- 110
+	Convert the DSM into Binary :
+	11111111.11111111.11111111.00000000
+		Number of 1’s = /24 -----DSM
+	Consider the host ID - 00000000
+	Find the magic bit (single bit that provides the required IPs) : 2 ^ 7 = 128
+	Binary subnet mask for this network :
+		11111111.11111111.11111111.10000000
+	 			(magic bit 0 change to 1)
+	Subnet mask : 255.255.255.128 for LAN 5
 
-Network ID : 192.168.1.0 - Class C
-Subnet mask for LAN 5 - 255.255.255.128   can be represented with a value /25, value is called as CIDR (Classless Interdomain Routing)
-
-Subnet : 2 ^ x = 2 ^ 1= 2 ( x = number of 1’s in host ID)
-Blocksize : 2 ^ n = 2 ^ 7=128 (n = number of 0’s in host ID)
-Hosts : (2 ^ n) -2 = (2 ^ 7) - 2 = 126 (IPs can b used validly)
-
-Binary Subnet Mask : 11111111.11111111.11111111.10000000
-Number of 1’s = 25
+	Network ID : 192.168.1.0 - Class C
+	Subnet mask for LAN 5 - 255.255.255.128   can be represented with a value /25, value is called as CIDR (Classless Interdomain Routing)
+	
+	Subnet : 2 ^ x = 2 ^ 1= 2 ( x = number of 1’s in host ID)
+	Blocksize : 2 ^ n = 2 ^ 7=128 (n = number of 0’s in host ID)
+	Hosts : (2 ^ n) -2 = (2 ^ 7) - 2 = 126 (IPs can b used validly)
+	
+	Binary Subnet Mask : 11111111.11111111.11111111.10000000
+	Number of 1’s = 25
 
 0 Network :
 LAN 5 =110
