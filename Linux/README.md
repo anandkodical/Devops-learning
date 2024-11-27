@@ -314,10 +314,13 @@ We can make the runlavels under /etc/inittab file. Also, can check the current r
 
   ![image](https://github.com/user-attachments/assets/5dcfe914-f18b-41fe-9ab5-1f5513bee0c2)
 
-  
 
 
-  
+  **To know the which bash current user logged in**
+
+  ps -p $$
+
+  ![image](https://github.com/user-attachments/assets/ce23f8b2-eb94-4c7e-a93a-2f1b7f20f8fb)
 
 
   
