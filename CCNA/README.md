@@ -455,3 +455,26 @@ Broadcast value = 172.18.1.31
 	131072/256 = 512;  512/256 =2
 	Hosts:131072 -2 = 131070
 
+
+**FLSM : FIXED LENGTH SUBNET MASK**
+
+   When all subnet has fixed value 
+
+**VLSM : VARIABLE LENGTH SUBNET MASK**
+
+When the subnet value or not same or varying. VLSM is the process of performing subnetting to a network that is already subnetted.
+
+3 layered Network Model
+
+![image](https://github.com/user-attachments/assets/a88f78cb-28e3-44f1-9c9f-ba08ebf410e6)
+
+
+
+Core layer - The part of your network where the router is available and configured.
+
+Distribution layer - The part of your network where the Switch is available, where the switch takes care of network distribution.
+
+Access layer - The part of your network where the PC / End devices is available
+
+
+
