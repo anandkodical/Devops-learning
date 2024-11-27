@@ -59,6 +59,9 @@ Decoupling: you can use service bus to separate applications and services from e
 Benifits of service bus: Decoupling,Availability,scalabilty,loadbalncing,datarouting,Transactional work
 
 
+Redis cache caching web pages and reducing the load on servers.
+
+
 
 
 
