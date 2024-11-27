@@ -56,6 +56,8 @@ Azure service bus is a cloud messaging service that enables applications and ser
 
 Decoupling: you can use service bus to separate applications and services from each other
 
+Benifits of service bus: Decoupling,Availability,scalabilty,loadbalncing,datarouting,Transactional work
+
 
 
 
