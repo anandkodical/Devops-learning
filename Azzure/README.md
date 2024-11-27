@@ -22,6 +22,34 @@ Select Free trail while creating account which will not cost.
       7. Now select relavent options in Networking, Management, Monitoring, Advanced and Tags section and click on create.
 
 
+**Logic Apps**
+
+1. Customer-focused processes, such as direct sales.
+2. Administrative tasks, such as autoarchiving outdated videos.
+3. Marketing tasks, such as monitoring and analyzing news for market perception.
+
+
+**Benefits of logic app**
+
+Azure Logic Apps is a cloud platform that helps you:
+
+Automate business processes as integration workflows that run in Azure cloud.
+
+Build integration solutions for a wide range of scenarios, not only inside your company and customer-facing, but also business to business (B2B).
+
+Create workflows more easily using the visual designer in a browser, Visual Studio Code, or Visual Studio.
+
+The designer provides 1,000+ prebuilt connectors and operations that work with a vast variety of services, systems, apps, and data. Or, create your own custom connectors to work with existing APIs. Either way, you save time because you rarely have to write or maintain any code.
+
+Automate your own software development process with continuous integration and deployment (CI/CD) in Azure DevOps.
+
+Monitor and maintain your solutions more easily using tools and services in Azure.  example 
+
+   1. Customer-focused processes, such as direct sales.
+   2. Administrative tasks, such as autoarchiving outdated videos.
+   3. Marketing tasks, such as monitoring and analyzing news for market perception.
+
+
 
 
 
