@@ -47,8 +47,14 @@ Monitor and maintain your solutions more easily using tools and services in Azur
 
    1. Customer-focused processes, such as direct sales.
    2. Administrative tasks, such as autoarchiving outdated videos.
-   3. Marketing tasks, such as monitoring and analyzing news for market perception.
+   3. Marketing tasks, such as monitoring and analyzing news for market perception
 
+
+**Azure service bus**
+
+Azure service bus is a cloud messaging service that enables applications and services to communicate reliably.
+
+Decoupling: you can use service bus to separate applications and services from each other
 
 
 
