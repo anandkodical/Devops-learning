@@ -340,6 +340,14 @@ If you wish to switch to .sh from bash the type **sh** command. To return to bas
   ![image](https://github.com/user-attachments/assets/c8548655-e619-4f9c-a8fa-90271b8afd42)
 
 
+**To change the bash to /sbin/nologin**
+
+	usermod -s /sbin/nologin nov21		(This will make exit from the terminal when user nov21 tries to login to server)
+
+![image](https://github.com/user-attachments/assets/08d2f811-19b0-405c-91a2-3d49e109f121)
+
+  
+  
   **Difference between .bash_profile & .bash_rc**
 
   	.bash_profile file will be executed whenever user directly login to linux server. This includes new session or duplicate session in Putty application.
@@ -390,6 +398,29 @@ To check whether group is added successfully.
 
 ![image](https://github.com/user-attachments/assets/03a537ed-2069-4337-a984-e6ecd891a78a)
 ![image](https://github.com/user-attachments/assets/1ef7ea8d-6c94-44c8-9bcd-015607820cb8)
+
+
+**To lock the password for a user**
+
+	passwd -l nov21		(This will lock the user by login to that he will get the Access denied error while login)
+
+![image](https://github.com/user-attachments/assets/b56912b8-71dc-4e48-80cd-e3e300a53923)
+
+
+**To unlock the password to user**
+
+	passwd -u nov21
+
+![image](https://github.com/user-attachments/assets/03610fd7-12c2-4a21-a100-fc35aecbc669)
+
+**To delete the group**
+
+	groupdel gnov27
+
+ 
+
+
+
 
 
 
