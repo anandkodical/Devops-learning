@@ -353,7 +353,49 @@ If you wish to switch to .sh from bash the type **sh** command. To return to bas
 	Since .bash_profile is calling the .bashrc command as well, commands will be executed for both direct and indirect logins.
 
 
+ 
+ 
  **GROUP ADMINISTRATION**
+
+ Creating a group
+
+ 	groupadd gnov27
+
+To check whether group is added successfully.
+
+ 	cat /etc/group
+
+	Note: If the group entry is present in only /group then it's a group. If the entry is present in both /group and /passwd then it's a user.
+
+ **To add a user to created group**
+
+ 	usermod -G gnov27 nov21
+
+  To confirm this, 
+
+  	cat /etc/group|grep nov21
+
+   ![image](https://github.com/user-attachments/assets/c55ea7e9-25db-4654-885c-2011b7706048)
+
+   	Note : This will remove the existing groups if any added to the user while adding to gnov27 group. In order to append use below command.
+
+    	usermod -a -G gnov27 nov21
+
+![image](https://github.com/user-attachments/assets/2ada577a-7986-466e-87e3-5a58125a960a)
+
+
+**To remove user from the group**
+
+	gpasswd -d nov22 gnov27
+
+![image](https://github.com/user-attachments/assets/03a537ed-2069-4337-a984-e6ecd891a78a)
+![image](https://github.com/user-attachments/assets/1ef7ea8d-6c94-44c8-9bcd-015607820cb8)
+
+
+
+
+
+
  
 
  
