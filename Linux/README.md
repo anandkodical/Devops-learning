@@ -323,6 +323,43 @@ We can make the runlavels under /etc/inittab file. Also, can check the current r
   ![image](https://github.com/user-attachments/assets/ce23f8b2-eb94-4c7e-a93a-2f1b7f20f8fb)
 
 
+  **To know available shells**
+
+  cat /etc/shells	(Most of the services support bash and if the user developed the application using .sh then those commands will run in .sh shell)
+
+  ![image](https://github.com/user-attachments/assets/9c3ea009-742f-4fab-96fd-ba4998446b46)
+
+
+If you wish to switch to .sh from bash the type **sh** command. To return to bash, type **exit**.
+
+
+  **To change the shell terminal from bash to sh**
+
+  usermod -s /bin/sh nov21	(Terminal for user nov21 will be chnaged to bash to sh permanently. If you login to nov21, it will show sh instead of bash)
+
+  ![image](https://github.com/user-attachments/assets/c8548655-e619-4f9c-a8fa-90271b8afd42)
+
+
+  **Difference between .bash_profile & .bash_rc**
+
+  	.bash_profile file will be executed whenever user directly login to linux server. This includes new session or duplicate session in Putty application.
+
+   	.bashrc will be executed while user indirectly login to server. This is when we do switch user.
+
+    	For example, if we add the uptime and date command in .bash_profile the when you login as duplicate session the both command will be executed.
+     
+![image](https://github.com/user-attachments/assets/8a3f70dc-8601-4376-9da3-9f9b1bed7193)
+
+	Since .bash_profile is calling the .bashrc command as well, commands will be executed for both direct and indirect logins.
+
+ 
+
+
+
+
+  
+
+
   
 
 
