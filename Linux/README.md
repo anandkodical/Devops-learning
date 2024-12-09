@@ -417,6 +417,38 @@ To check whether group is added successfully.
 
 	groupdel gnov27
 
+ **To check the user age details**
+
+ 	chage -l nov21	(It will show Last password change, Passwd expiration date, Account expiration details etc)
+  
+![image](https://github.com/user-attachments/assets/6735d7ea-2fb6-4527-81d2-98a3e009e3f5)
+
+
+**To change the expiration date of the user to Dec 30, 2025**
+
+	chage -E "2025-12-30" nov21
+
+![image](https://github.com/user-attachments/assets/aa28b583-398f-498f-bbb1-eae765ffa1f8)
+
+**To update the all values in chage option**
+
+	chage nov21
+
+ **To delete the User**
+
+ 	userdel nov21	(This will delete only the user from /etc/passwd and will not delete the user directory from /home/nov21)
+
+![image](https://github.com/user-attachments/assets/36ca2593-4066-4b51-8421-0ecd1bb5ffac)
+
+
+	userdel -r nov22	(This will delete the user along with home directory)
+
+![image](https://github.com/user-attachments/assets/d3eb86e6-176e-41b3-aa6a-5929b5e4acd2)
+
+
+
+
+
  
 
 
