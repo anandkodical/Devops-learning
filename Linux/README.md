@@ -446,6 +446,74 @@ To check whether group is added successfully.
 ![image](https://github.com/user-attachments/assets/d3eb86e6-176e-41b3-aa6a-5929b5e4acd2)
 
 
+**ZIP and UNZIP of a file**
+
+	zip <new-file> <original file>
+
+ 	zip zi.txt kp.txt
+
+![image](https://github.com/user-attachments/assets/00949d2d-8631-4cc1-921c-7941365e1a1c)
+
+	zcat zi.txt	(To display the content of zipped file)
+
+![image](https://github.com/user-attachments/assets/85378ed3-3e8a-40de-83f5-0bdd7ef9ea6a)
+
+**To know the original file name which got zipped**
+
+	unzip -l zi.txt
+
+![image](https://github.com/user-attachments/assets/95402efa-7f65-4e18-a5a6-7eb6bc5cbfa7)
+
+
+**To unzip the file zi.txt and get the original file back**
+
+	unzip zi.txt
+ 
+![image](https://github.com/user-attachments/assets/a95d4e36-78cb-4c43-a784-d21bcf837b30)
+
+**Method 2 for zip the file**
+
+	gzip <filename?
+
+	gzip kp.txt	(File will be renamed as kp.txt.gz)
+
+ In order to see the original file, execute below command
+
+ 	gunzip -l kp.txt.gz
+
+![image](https://github.com/user-attachments/assets/4f2b9089-4a70-4495-9d6d-51f519a79ea5)
+
+
+To unzip the .gz file,
+
+	gunzip kp.txt.gz
+
+![image](https://github.com/user-attachments/assets/904ae43a-2fbe-4a42-bf97-7a1b969ce569)
+
+
+ 
+**ZIP and UNZIP of a directory**
+
+tar -cvf <new-file.tar> <original directory>
+
+	tar -cvf bdir.tar bdir	(bdir directory will be zipped to bdir.tar file)
+
+![image](https://github.com/user-attachments/assets/cd6b8d6c-f589-4579-a3f0-3108ce72c851)
+
+After converting the directory to .tar file then need to gzip format.
+
+	gzip bdir.tar
+
+![image](https://github.com/user-attachments/assets/e157b82e-30c9-4d8c-9886-0615fbd9f064)
+![image](https://github.com/user-attachments/assets/22e492ef-2456-437b-bc16-0c6c36126506)
+
+
+
+
+
+
+
+
 
 
 
