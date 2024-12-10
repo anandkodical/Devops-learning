@@ -179,24 +179,32 @@ I have started learning RedHat linux commands. I will update weekly report below
 **Linux File Structure**
 
 
-1. /etc : For all permanent chnages and system configuration changes will be updated under this directory
-2. /boot : Contains all files which are required for booting of the server. If any files got deleted, server will not get boot
-3. /home : Whenever new user is created, one directory will be created in /home with username and that will be the home directory for that user
-4. /root : It's the home directory of root user.
-5. /var	: Where logs and databases are stored.
-     a. /var/log/cron 	:- Contains sheduled tasks log details to know whether all tasks were executed or not
-     b. /var/log/secure	:- Shows all user authentication logs including wrong password, success entry
-     c. /var/log/messages :- Contains general information log of the server
-     d. /var/log/dmesg	:- Shows hardware log details including which hardware got detected while boot and which are not
-     e. /var/log/boot.log  :- Shows all services which are started at the time of boot and not started services
-     f. /var/log/maillog :- To verify whether all emails have been delivered to receipents or not
-6. /proc :- Contains only live running information of server
-    /proc/meminfo :- Shows live RAM details of the server
-    /proc/cpuinfo :- Contains processor details
-    /proc/mounts :- Contains current mount and partition details
-7. /tmp  :- All temporary files created by all users will be saved and accessible to everyone. Therefore, important files or information should not be saved in this directory
-8. /mnt :- Contains external mounted details
-9. /dev	:- Contains device information like HDD, Pendrive etc
+	1. /etc : For all permanent chnages and system configuration changes will be updated under this directory
+ 
+	2. /boot : Contains all files which are required for booting of the server. If any files got deleted, server will not get boot
+ 
+	3. /home : Whenever new user is created, one directory will be created in /home with username and that will be the home directory for that user
+ 
+	4. /root : It's the home directory of root user.
+ 
+	5. /var	: Where logs and databases are stored.
+     		a. /var/log/cron 	:- Contains sheduled tasks log details to know whether all tasks were executed or not
+     		b. /var/log/secure	:- Shows all user authentication logs including wrong password, success entry
+     		c. /var/log/messages :- Contains general information log of the server
+     		d. /var/log/dmesg	:- Shows hardware log details including which hardware got detected while boot and which are not
+     		e. /var/log/boot.log  :- Shows all services which are started at the time of boot and not started services
+     		f. /var/log/maillog :- To verify whether all emails have been delivered to receipents or not
+       
+	6. /proc :- Contains only live running information of server
+    		/proc/meminfo :- Shows live RAM details of the server
+    		/proc/cpuinfo :- Contains processor details
+    		/proc/mounts :- Contains current mount and partition details
+      
+	7. /tmp  :- All temporary files created by all users will be saved and accessible to everyone. Therefore, important files or information should not be 	saved in this directory
+ 
+	8. /mnt :- Contains external mounted details
+ 
+	9. /dev	:- Contains device information like HDD, Pendrive etc
 
     
 
