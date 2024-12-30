@@ -476,5 +476,111 @@ Distribution layer - The part of your network where the Switch is available, whe
 
 Access layer - The part of your network where the PC / End devices is available
 
+**ROUTER: -**
+
+Router is a Layer3/network layer networking device.
+
+It is used to interconnect multiple devices within a LAN or also to interconnect multiple LANs with the help of a WAN connectivity.
+
+Router performs logical addressing which helps it to understand/communicate with devices using IP addresses.
+
+Router also functions as a gateway.
+
+The main function of a router is to ROUTE TRAFFIC.
+
+Router is mainly classified into 2 categories as below:-
+
+	Manageable router
+	
+ 	Unmanageable router
+
+Routers can also be used to connect to multiple routers within a network.
+
+
+	INTERNAL ARCHITECTURE OF A ROUTER: -
+
+
+	FRONT PANEL OF A ROUTER
+
+Components of the front panel: -
+
+Power Cable
+
+On / Off switch
+
+Console port
+
+Auxiliary port
+
+Fast Ethernet ports
+
+Serial(WAN) ports
+
+Add - on slots
+
+Internal components of a Router: -
+	
+ 	CPU
+	RAM
+	NVRAM - Non-volatile RAM(Hard disk of the router)
+	Firm Chips - BIOS of the Router
+	SMPS - Switch Mode Power Supply
+
+
+**Modes of Router:-**
+
+**User Mode:-**
+
+	Entry level interface of a router.
+	
+ 	User mode is identified with a (>) greater symbol on the interface.
+	
+ 	To perform any further activities on the router we need to enter privileged mode.
+	
+ 	The command to switch to privileged mode is “enable”
+  
+**Privileged Mode:-**
+
+	Second mode of the router.
+	
+ 	Privileged mode is identified with a (#) hash symbol.
+	
+ 	This mode can be used to execute any basic level commands to view the router, IP, network information.
+	
+ 	To perform any advanced or configuration related functions we need to enter global configuration mode.
+	
+ 	The command to switch to global config mode is “ configure terminal ”
+
+	Global Configuration Mode:-
+	
+ 	Identified with (config)# .
+	
+ 	Used to perform any configuration and changes on the router.
+	
+ 	Configurations like changing the router name, assigning IP etc etc can be done only in the global config mode.
+
+
+**Basic commands for a router:-**
+
+	enable
+	configure terminal - Global Configuration mode 
+	host router name - command to change router name
+	enable secret password - password for enable mode
+	line console 0 - To configure the console port
+	exec-timeout 0 0 - To execute commands within 0 mins and 0 secs
+	pass password - password for console port
+	login
+	exit
+	line vty 0 4 - Virtual Terminal 
+	pass password - password for vty mode
+	login 
+	exit
+
+**Commands to configure/assign IP:-**
+
+	Interface interface number(port to which the cable is connected)
+	ip address ip subnet mask
+	no shutdown - to bring up the interface 
+	Exit
 
 
