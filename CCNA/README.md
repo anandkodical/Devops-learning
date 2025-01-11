@@ -640,4 +640,94 @@ R2(config-if)#exit
 Wr mem - command to save configuration to the memory.
 Reload 
 
+**Lab 2 :-  Advanced Network Topology**
+
+![image](https://github.com/user-attachments/assets/5b5f35be-b158-4df4-8619-31cf0f371970)
+
+
+Router1 - Router2 - 200.200.200.0/30
+
+Router1 - Switch1 - 192.168.1.0/24
+
+Router2 - Switch2 - 192.168.2.0/24
+
+Router3 - Switch2 - 100.100.100.0/30
+
+Router3 - PC4 - 50.50.50.0/30
+
+
+ROUTER 1: -
+Router>
+Router>enable 
+Router#configure terminal
+Router(config)#hostname Router1
+Router1(config)#enable secret ccna
+Router1(config)#line console 0
+Router1(config-line)#exec-timeout 0 0
+Router1(config-line)#logg sync
+Router1(config-line)#pass ccna
+Router1(config-line)#login
+Router1(config-line)#exit
+Router1(config)#line vty 0 4
+Router1(config-line)#pass ccna
+Router1(config-line)#login
+Router1(config-line)#exit
+Router1(config)#interface s0/0/0
+Router1(config-if)#ip address 200.200.200.1 255.255.255.252
+Router1(config-if)#no shutdown
+Router1(config-if)#exit
+Router1(config)#interface f0/0
+Router1(config-if)#ip address 192.168.1.1 255.255.255.0
+Router1(config-if)#no shutdown
+Router1(config-if)#exit
+
+ROUTER 2: -
+Router>enable
+Router#configure terminal
+Router(config)#hostname Router2
+Router2(config)#enable secret ccna
+Router2(config)#line console 0
+Router2(config-line)#exec-timeout 0 0
+Router2(config-line)#logg sync
+Router2(config-line)#pass ccna
+Router2(config-line)#login
+Router2(config-line)#exit
+Router2(config)#line vty 0 4
+Router2(config-line)#pass ccna
+Router2(config-line)#login
+Router2(config-line)#exit
+Router2(config)#interface s0/0/0
+Router2(config-if)#ip address 200.200.200.2 255.255.255.252
+Router2(config-if)#no shutdown
+Router2(config-if)#exit
+Router2(config)#interface f0/0
+Router2(config-if)#ip address 192.168.2.1 255.255.255.0
+Router2(config-if)#no shutdown
+Router2(config-if)#exit
+
+ROUTER 3: -
+Router>enable
+Router#configure terminal
+Router(config)#hostname Router3
+Router3(config)#enable secret ccna
+Router3(config)#line console 0
+Router3(config-line)#exec-timeout 0 0
+Router3(config-line)#logg sync
+Router3(config-line)#pass ccna
+Router3(config-line)#login
+Router3(config-line)#exit
+Router3(config)#line vty 0 4
+Router3(config-line)#pass ccna
+Router3(config-line)#login
+Router3(config-line)#exit
+Router3(config)#interface f0/0
+Router3(config-if)#ip address 100.100.100.1 255.255.255.252
+Router3(config-if)#no shutdown
+Router3(config-if)#exit
+Router3(config)#interface f0/1
+Router3(config-if)#ip address 50.50.50.1 255.255.255.252
+Router3(config-if)#no shutdown
+Router3(config-if)#exit
+
+
 
