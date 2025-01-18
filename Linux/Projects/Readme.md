@@ -10,4 +10,5 @@ Sent ftp package to client via scp so that client can configure vsftpd.Run vsftp
 
 
 Skills Used: YUM configuration on server and run vsftpd service
+             
              Directory sharing and permissions management
