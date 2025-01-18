@@ -1,6 +1,6 @@
 Here are the projects I have done
 
-#1. Configuring YUM and FTP Server for File Sharing#
+#1. Configuring YUM and FTP Server for File Sharing
 
 Pre-requisites : Configured YUM and made server as permissible by setenforce=0 and iptables stop. 
 
