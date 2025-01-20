@@ -1,1 +1,45 @@
+**Title: FTP Server and Client Setup**
 
+FTP (File Transfer Protocol) is a standard network protocol used to transfer files between a client and a server over a network.
+It is commonly used for File sharing and remote access. 
+
+Prerequisites:
+  Linux systems for both server and client.
+  Root access to configure the systems.
+  Both server should be in permissive mode. [setenforce 0 and service iptables stop]
+  Basic knowledge of networking and file transfer protocols.
+
+FTP package details
+    Package: vsftpd
+    Service: vsftpd
+    port : 21
+    config: /etc/vsftpd/vsftpd.conf
+    Data share path: /var/ftp/pub
+
+Updates to Be Done in Master Server:
+  Install the FTP server software : 
+      yum install vsftpd -y
+  Create a file under /var/ftp/pub
+      cat > ftp_file_to_download
+
+Configure the FTP server:
+  Edit /etc/vsftpd/vsftpd.conf:
+    Enable anonymous login if required: anonymous_enable=YES/NO.
+    Configure local user access: local_enable=YES.
+    Set upload/download permissions: write_enable=YES.
+  Restart the FTP service:
+    service vsftpd restart
+
+Updates to Be Done in Client Machine:
+  Install the FTP software:
+    yum install ftp
+  Connect to the FTP server:
+    ftp <server_IP>
+    cd pub
+    get ftp_file_to_download (file will get downloaded to local)
+
+Key Skills Used:
+  Linux system administration.
+  Networking and FTP protocol understanding.
+  File transfer and access control setup.
+  Troubleshooting FTP connections.
