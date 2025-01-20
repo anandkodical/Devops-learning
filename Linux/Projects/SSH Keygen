@@ -1,1 +1,27 @@
+Title: SSH Key-Based Authentication Setup
+
+Prerequisites:
+
+  => Linux systems for both server and client.
+  => Root or sudo access for configuration.
+  => Basic understanding of SSH protocol
+
+Updates to Be Done on Server 1:
+  1. Generate SSH key pair:
+      ssh-keygen -t rsa
+      Save the key pair (default path: ~/.ssh/id_rsa)
+      
+  2. Copy the public key to the Server 2:
+      scp id_rsa.pub user@<server_IP>:~   (This will copy the file to users home directory)
+
+Updates to Be Done on Server 2:
+
+  1. Go to users home directory
+  2. mkdir .ssh
+  3. mv id_rsa.pub .ssh/
+  4. chmod 700 .
+  5. mv id_rsa.pub authorized_keys
+  6. chmod 640 authorized_keys
+
+Now we can access the server 2 from server 1 without authentication.
 
