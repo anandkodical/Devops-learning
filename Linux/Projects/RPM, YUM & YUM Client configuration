@@ -1,7 +1,27 @@
 **RPM (Redhat Package Manager)**
 
-RPM is a package management system used in RedHat, Ubuntu CentOS etc. It allows users to install, update, query, and remove software packages. In order to get the packages, we will need to mount RedHat ISO file.
+RPM is a package management system used in RedHat, Ubuntu CentOS etc. It allows users to install, update, query, and remove software packages. 
+In order to get the packages, we will need to mount RedHat ISO file and make a copy in different path.
 
     mount -o loop RHEL6.3-20120613.2-Server-x86_64-DVD1.iso /var/rpm_dec25
+
+Now the packages will be saved under /var/rpm_dec25/Packages
+
+Since this is mounted directory, it will get deleted once unmount or the RHEL file gets deleted. To resolve this will need to make a copy of the packages to local directory.
+
+    Yes|cp -rvfp /var/rpm_dec25 /var/yum_dec25
+
+Now update the configuration file under /etc/yum.repos.d/master.repo (Letting kernal know to the packages from this path for installation of packages)
+
+    [MASTER]
+    name=master
+    baseurl=file:///yum_dec25/rpm_dec25
+    enabled=1  
+    gpgcheck=0
+
+Now we can confirm whether all packages are recognizing or not by rum clean all and yum repolist
+
+
+
 
 
