@@ -1,1 +1,62 @@
+LVM (Logical Volume Manager) is a storage management method that allows you to manage disk space more flexibly and efficiently than normal partition. 
+It provides a way to create, resize, and manage logical volumes without server downtime. 
 
+There are few steps to create LVM
+
+    1. Create Partition
+    2. Create Physical Volume
+    3. Add Physical Volume to  Volume Group
+    4. Create LVM
+    5. Create file system
+    6. Mount file system
+    7. Resizing
+
+1. Create partition
+    1. Run fdisk /dev/sdb
+    2. Type n -> press enter  (for creating new partition)
+    3. Type p -> press enter (primary partition)
+    4. Type 2 -> press enter  (partition number)
+    5. Press enter (Don't type anything for 1st cylinder)
+    6. Type +2G for last cylinder and press enter
+    7. Type W (for save and quit)
+    8. Run lsblk (Now can see the 2GB partition called sdb2)
+
+2. Create physical volume
+    1. pvcreate /dev/sdb2
+    2. Run pvs to see the physical volume created
+
+3. Add physical volume to volume group
+    1. vgcreate vg_dec25 /dev/sdb2
+    2. Run vgs to check whether volume group created or not
+
+4. Create LVM
+    1. lvcreate -L 1G -n lv_dec25 vg_dec25
+    2. Run lvs to check LVM is created or not.
+         Note: LV path is /dev/vg_dec25/lv_dec25
+
+5. Create file system
+    1. mkfs.ext4 /dev/vg_dec25/lv_dec25
+
+6. Mount file system
+   In order to mount the LVM, need to create a directory
+   a. mkdir /var/lvmdec25
+   b. mount /dev/vg_dec25/lv_dec25 /var/lvmdec25
+   c. Run df -h and we can see /dev/mapper/vg_dec25/lv_dec25 row. This confirms this is LVM partition and not normal partition
+
+7. Resizing
+    1. lvresize -L +1G /dev/vg_dec25/lv_dec25
+    2. Run lvs to check the LVM size
+
+After these steps, we have created and resized the LVM but it's not yet recognized by the kernal. In order to inform the kernal
+    resize2fs /dev/vg_dec25/lv_dec25
+Now run df -h and we can see the LVM with 2GB
+
+Extending LVM if the storage is full.
+
+    1. Create a new partition
+    2. Create a physical group
+    3. vgextend vg_dec25 /dev/sdb3
+    4. Run vgs, can see total 7GB
+        Now attach the 5GB to existing LVM
+    5. lvresize -L +5G /dev/vg_dec25/lv_dec25
+    6. resize2fs /dev/mapper/vg_dec25/lv_dec25
