@@ -1,1 +1,43 @@
+To add new HDD
 
+Click on 'Player' in VM -> Manage -> Virtual Machine settings -> select Hard disk option -> Click Add -> Select Hard disk -> Next -> Next -> Select size 10GB -> Next -> Finish -> Ok
+Note: This will add the HDD to server but it will not be detected automatically. We need to scan the hardware using below steps (alternatively, we can reboot server as well)
+    
+for ((i=0;i<=32;i++)
+    do
+    echo "- - -" > /sys/class/scsi_host/host$i/scan
+done
+
+Now run lsblk and you can see the new HDD called sdb (In 1 HDD, we can create maximum 4 partition)
+
+Now we are going to make partition with 2GB
+    1. Run fdisk /dev/sdb
+    2. Type n -> press enter  (for creating new partition)
+    3. Type p -> press enter (primary partition)
+    4. Type 1 -> press enter
+    5. Press enter (Don't type anything for 1st cylinder)
+    6. Type +2G for last cylinder and press enter
+    7. Type W (for save and quit) Q (for quitting without save)
+    8. Run lsblk (Now can see the 2GB partition called sdb1)
+
+Now we need to create a file system on the partition created so that we can use it
+    1. mkfs.ext4  /dev/sdb1
+    2. Now run blkid /dev/sdb1 you will get the entry confirms file system has been created on sdb1 partition
+
+Now we need to create a directory in exiting partition and mount the new partition to this directory so that we can write to new partition
+    1. mkdir /var/dec23
+    2. mount /dev/sdb1 /var/dec23
+    3. Now run df -h 
+
+Now we need to check whether the files are saving in mounted partition
+    1. cd /var/dec23
+    2. ls -ltr
+    3. touch t{1..5}
+    4. umount /var/dec23 
+
+Note: Can see the folder with "lost+found" which indicates this is mounted partition
+
+Now create a new directory called dec24
+    1. mount /dev/sdb1 /var/dec24 
+    2. ls -ltr dec24
+    3. lsof | grep /var/dec24
