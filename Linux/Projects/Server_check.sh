@@ -19,7 +19,7 @@ else
 echo "Server $i is not sshable"
 fi
 else
-echo "Server $i is not reachable" >>Notreachable.txt  #List of the IP address which are not able to SSH to server
+echo "Server $i is not reachable" >>Notreachable.txt  #List of the IP address which are not able to SSH to server and save the result in Notreachable.txt file
 fi
 echo "==================================================="
 done
