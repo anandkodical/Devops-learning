@@ -1,1 +1,34 @@
+Pre-requisites : Add a new HDD
 
+Create swap partition (Primary)
+
+1. Follow the same steps to make partition as mentioned below
+    1. Run fdisk /dev/sdb
+    2. Type n -> press enter  (for creating new partition)
+    3. Type p -> press enter (primary partition)
+    4. Type 2 -> press enter
+    5. Press enter (Don't type anything for 1st cylinder)
+    6. Type +2G for last cylinder and press enter
+    7. Type W (for save and quit)
+    8. Run lsblk (Now can see the 2GB partition called sdb2)
+    9. Run mkswap /dev/sdb2
+    10. Run blkid /dev/sdb2
+Now we have created swap partition. Now we need to add this to system
+    swapon -v /dev/sdb2
+Now do swapon -s
+swap memory is added in system. Run free  to check
+
+
+Secondary swap partition
+
+Create a secondary swap
+    1. dd if=/dev/zero of=/var/swap24 bs=2M count=1 #if=input file, of=output file, /dev/zero is a null file, bs=block size, count=1, file will be created 1 file with 2MB (if count is 2 then 2 file will be created with 1MB each)
+    2. du -sh /var/swap24
+Now /var/swap24 file will be created as a secondary swap memory
+Now we need to add this file to system
+    mkswap /var/swap24
+    swapon -v /var/swap24
+    swapon -s
+    free
+swapoff /dev/sdb2
+swapoff /var/swap24
