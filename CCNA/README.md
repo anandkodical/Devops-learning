@@ -590,11 +590,11 @@ Internal components of a Router: -
 
 Commands: -
 
-ROUTER 1: -
+	ROUTER 1: -
 
-Router>enable
+	Router>enable
 
-Router#configure terminal
+	Router#configure terminal
 
 Router(config)#enable secret cisco
 
