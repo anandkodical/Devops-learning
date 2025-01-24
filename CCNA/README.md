@@ -729,5 +729,121 @@ Router3(config-if)#ip address 50.50.50.1 255.255.255.252
 Router3(config-if)#no shutdown
 Router3(config-if)#exit
 
+**Dynamic Host Configuration Protocol (DHCP)**
+
+It is a protocol that is used to assign an IP address to a host in the network, where the host is nothing but an end device.
+
+IP allocation methods:- 
+    Static :- Manual Allocation
+    Dynamic :- Range / Scope / Pool
+    Automatic: - APIPA ( Automatic Private IP Addressing)
+
+![image](https://github.com/user-attachments/assets/481bba33-7fa7-48e1-9207-9bdc55874cb1)
+
+Commands have to be entered in Global configuration mode:-
+
+#ip dhcp excluded-address <gateway ip>
+#ip dhcp pool <pool name>
+#network <network address> <subnet mask>
+#default-router <gateway ip>
+#exit
+
+
+Note: FOR A LAN THE IP ADDRESS CONFIGURED ON THE FAST INTERNET INTERFACE OF THE ROUTER IS THE GATEWAY IP.
+
+*Lab 3: - Dynamic Host Configuration Protocol*
+
+![image](https://github.com/user-attachments/assets/833002ea-57b1-4c85-a677-78bccca05521)
+
+
+ROUTER1:-
+Router>enable
+Router#configure terminal
+Router(config)#hostname Router1
+Router1(config)#enable secret ccna
+Router1(config)#line console 0
+Router1(config-line)#exec-timeout 0 0
+Router1(config-line)#logg sync
+Router1(config-line)#pass ccna
+Router1(config-line)#login
+Router1(config-line)#exit
+Router1(config)#line vty 0 4
+Router1(config-line)#pass ccna
+Router1(config-line)#login
+Router1(config-line)#exit
+Router1(config)#interface s0/0/0
+Router1(config-if)#ip address 200.200.200.1 255.255.255.252
+Router1(config-if)#no shutdown
+Router1(config-if)#exit
+Router1(config)#interface f0/0
+Router1(config-if)#ip address 192.168.1.1 255.255.255.0
+Router1(config-if)#no shutdown
+Router1(config-if)#exit
+Router1(config)#ip dhcp excluded-address 192.168.1.1
+Router1(config)#ip dhcp pool LAN1
+Router1(dhcp-config)#network 192.168.1.0 255.255.255.0
+Router1(dhcp-config)#default-router 192.168.1.1
+Router1(dhcp-config)#exit
+
+ROUTER2:-
+Router>enable
+Router#configure terminal
+Router(config)#hostname Router2
+Router2(config)#enable secret cisco
+Router2(config)#line console 0
+Router2(config-line)#exec-timeout 0 0
+Router2(config-line)#logg sync
+Router2(config-line)#pass besant
+Router2(config-line)#login
+Router2(config-line)#exit
+Router2(config)#line vty 0 4
+Router2(config-line)#pass ccna
+Router2(config-line)#login
+Router2(config-line)#exit
+Router2(config)#interface s0/0/0
+Router2(config-if)#ip address 200.200.200.2 255.255.255.252
+Router2(config-if)#no shutdown
+Router2(config-if)#exit
+Router2(config)#interface f0/0
+Router2(config-if)#ip address 192.168.2.1 255.255.255.0
+Router2(config-if)#no shutdown
+Router2(config-if)#exit
+Router2(config)#ip dhcp excluded-address 192.168.2.1
+Router2(config)#ip dhcp pool LAN2
+Router2(dhcp-config)#network 192.168.2.0 255.255.255.0
+Router2(dhcp-config)#default-router 192.168.2.1
+Router2(dhcp-config)#exit
+
+ROUTER3: -
+Router>enable
+Router#configure terminal
+Router(config)#hostname Router3
+Router3(config)#enable secret besant
+Router3(config)#line console 0
+Router3(config-line)#exec-timeout 0 0
+Router3(config-line)#logg sync
+Router3(config-line)#pass cisco
+Router3(config-line)#login
+Router3(config-line)#exit
+Router3(config)#line vty 0 4
+Router3(config-line)#pass ccna
+Router3(config-line)#login
+Router3(config-line)#exit
+Router3(config)#interface f0/0
+Router3(config-if)#ip address 100.100.100.1 255.255.255.252
+Router3(config-if)#no shutdown
+Router3(config-if)#exit
+Router3(config)#interface f0/1
+Router3(config-if)#ip address 50.50.50.1 255.255.255.252
+Router3(config-if)#no shutdown
+Router3(config-if)#exit
+Router3(config)#ip dhcp excluded-address 50.50.50.1
+Router3(config)#ip dhcp pool LAN3
+Router3(dhcp-config)#network 50.50.50.0 255.255.255.252
+Router3(dhcp-config)#default-router 50.50.50.1
+Router3(dhcp-config)#exit
+
+
+
 
 
