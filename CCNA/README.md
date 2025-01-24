@@ -596,96 +596,96 @@ Commands: -
 
 	Router#configure terminal
 
-Router(config)#enable secret cisco
+	Router(config)#enable secret cisco
 
-Router(config)#hostname R1
+	Router(config)#hostname R1
 
-R1(config)#line console 0
+	R1(config)#line console 0
 
-R1(config-line)#exec-timeout 0 0
+	R1(config-line)#exec-timeout 0 0
+	
+	R1(config-line)#logg sync
+	
+	R1(config-line)#pass ccna
 
-R1(config-line)#logg sync
+	R1(config-line)#login
+	
+	R1(config-line)#exit
+	
+	R1(config)#line vty 0 4
+	
+	R1(config-line)#pass ccna
+	
+	R1(config-line)#login
+	
+	R1(config-line)#exit
+	
+	R1(config)#interface s0/0/0
+	
+	R1(config-if)#ip address 192.168.0.1 255.255.255.252
+	
+	R1(config-if)#no shutdown
 
-R1(config-line)#pass ccna
-
-R1(config-line)#login
-
-R1(config-line)#exit
-
-R1(config)#line vty 0 4
-
-R1(config-line)#pass ccna
-
-R1(config-line)#login
-
-R1(config-line)#exit
-
-R1(config)#interface s0/0/0
-
-R1(config-if)#ip address 192.168.0.1 255.255.255.252
-
-R1(config-if)#no shutdown
-
-R1(config-if)#exit
-
-R1(config)#interface f0/0
-
-R1(config-if)#ip address 192.168.1.1 255.255.255.0
-
-R1(config-if)#no shutdown
-
-R1(config-if)#exit
+	R1(config-if)#exit
+	
+	R1(config)#interface f0/0
+	
+	R1(config-if)#ip address 192.168.1.1 255.255.255.0
+	
+	R1(config-if)#no shutdown
+	
+	R1(config-if)#exit
 
 ROUTER 2: -
 
 
-Router>enable
+	Router>enable
+	
+	Router#configure terminal
+	
+	Router(config)#hostname R2
+	
+	R2(config)#enable secret ccna
+	
+	R2(config)#line console 0
+	
+	R2(config-line)#exec-timeout 0 0
+	
+	R2(config-line)#logg sync
+	
+	R2(config-line)#pass ccna
+	
+	R2(config-line)#login
 
-Router#configure terminal
+	R2(config-line)#exit
+	
+	R2(config)#line vty 0 4
+	
+	R2(config-line)#pass ccna
+	
+	R2(config-line)#login
+	
+	R2(config-line)#exit
+	
+	R2(config)#interface s0/0/0
+	
+	R2(config-if)#ip address 192.168.0.2 255.255.255.252
+	
+	R2(config-if)#no shutdown
+	
+	R2(config-if)#exit
 
-Router(config)#hostname R2
-
-R2(config)#enable secret ccna
-
-R2(config)#line console 0
-
-R2(config-line)#exec-timeout 0 0
-
-R2(config-line)#logg sync
-
-R2(config-line)#pass ccna
-
-R2(config-line)#login
-
-R2(config-line)#exit
-
-R2(config)#line vty 0 4
-
-R2(config-line)#pass ccna
-
-R2(config-line)#login
-
-R2(config-line)#exit
-
-R2(config)#interface s0/0/0
-
-R2(config-if)#ip address 192.168.0.2 255.255.255.252
-
-R2(config-if)#no shutdown
-
-R2(config-if)#exit
-
-R2(config)#interface f0/0
-
-R2(config-if)#ip address 192.168.2.1 255.255.255.0
-
-R2(conexfig-if)#no shutdown
-
-R2(config-if)#exit
-
-Wr mem - command to save configuration to the memory.
-
-Reload 
+	R2(config)#interface f0/0
+	
+	R2(config-if)#ip address 192.168.2.1 255.255.255.0
+	
+	R2(conexfig-if)#no shutdown
+	
+	R2(config-if)#exit
+	
+	Wr mem - command to save configuration to the memory.
+	
+	Reload 
 
 **Lab 2 :-  Advanced Network Topology**
 
@@ -704,29 +704,29 @@ Router3 - PC4 - 50.50.50.0/30
 
 
 ROUTER 1: -
-Router>
-Router>enable 
-Router#configure terminal
-Router(config)#hostname Router1
-Router1(config)#enable secret ccna
-Router1(config)#line console 0
-Router1(config-line)#exec-timeout 0 0
-Router1(config-line)#logg sync
-Router1(config-line)#pass ccna
-Router1(config-line)#login
-Router1(config-line)#exit
-Router1(config)#line vty 0 4
-Router1(config-line)#pass ccna
-Router1(config-line)#login
-Router1(config-line)#exit
-Router1(config)#interface s0/0/0
-Router1(config-if)#ip address 200.200.200.1 255.255.255.252
-Router1(config-if)#no shutdown
-Router1(config-if)#exit
-Router1(config)#interface f0/0
-Router1(config-if)#ip address 192.168.1.1 255.255.255.0
-Router1(config-if)#no shutdown
-Router1(config-if)#exit
+	Router>
+	Router>enable 
+	Router#configure terminal
+	Router(config)#hostname Router1
+	Router1(config)#enable secret ccna
+	Router1(config)#line console 0
+	Router1(config-line)#exec-timeout 0 0
+	Router1(config-line)#logg sync
+	Router1(config-line)#pass ccna
+	Router1(config-line)#login
+	Router1(config-line)#exit
+	Router1(config)#line vty 0 4
+	Router1(config-line)#pass ccna
+	Router1(config-line)#login
+	Router1(config-line)#exit
+	Router1(config)#interface s0/0/0
+	Router1(config-if)#ip address 200.200.200.1 255.255.255.252
+	Router1(config-if)#no shutdown
+	Router1(config-if)#exit
+	Router1(config)#interface f0/0
+	Router1(config-if)#ip address 192.168.1.1 255.255.255.0
+	Router1(config-if)#no shutdown
+	Router1(config-if)#exit
 
 ROUTER 2: -
 Router>enable
