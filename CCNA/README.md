@@ -900,62 +900,64 @@ ROUTER1:-
 	Router1(dhcp-config)#exit
 
 ROUTER2:-
-Router>enable
-Router#configure terminal
-Router(config)#hostname Router2
-Router2(config)#enable secret cisco
-Router2(config)#line console 0
-Router2(config-line)#exec-timeout 0 0
-Router2(config-line)#logg sync
-Router2(config-line)#pass besant
-Router2(config-line)#login
-Router2(config-line)#exit
-Router2(config)#line vty 0 4
-Router2(config-line)#pass ccna
-Router2(config-line)#login
-Router2(config-line)#exit
-Router2(config)#interface s0/0/0
-Router2(config-if)#ip address 200.200.200.2 255.255.255.252
-Router2(config-if)#no shutdown
-Router2(config-if)#exit
-Router2(config)#interface f0/0
-Router2(config-if)#ip address 192.168.2.1 255.255.255.0
-Router2(config-if)#no shutdown
-Router2(config-if)#exit
-Router2(config)#ip dhcp excluded-address 192.168.2.1
-Router2(config)#ip dhcp pool LAN2
-Router2(dhcp-config)#network 192.168.2.0 255.255.255.0
-Router2(dhcp-config)#default-router 192.168.2.1
-Router2(dhcp-config)#exit
+
+	Router>enable
+	Router#configure terminal
+	Router(config)#hostname Router2
+	Router2(config)#enable secret cisco
+	Router2(config)#line console 0
+	Router2(config-line)#exec-timeout 0 0
+	Router2(config-line)#logg sync
+	Router2(config-line)#pass besant
+	Router2(config-line)#login
+	Router2(config-line)#exit
+	Router2(config)#line vty 0 4
+	Router2(config-line)#pass ccna
+	Router2(config-line)#login
+	Router2(config-line)#exit
+	Router2(config)#interface s0/0/0
+	Router2(config-if)#ip address 200.200.200.2 255.255.255.252
+	Router2(config-if)#no shutdown
+	Router2(config-if)#exit
+	Router2(config)#interface f0/0
+	Router2(config-if)#ip address 192.168.2.1 255.255.255.0
+	Router2(config-if)#no shutdown
+	Router2(config-if)#exit
+	Router2(config)#ip dhcp excluded-address 192.168.2.1
+	Router2(config)#ip dhcp pool LAN2
+	Router2(dhcp-config)#network 192.168.2.0 255.255.255.0
+	Router2(dhcp-config)#default-router 192.168.2.1
+	Router2(dhcp-config)#exit
 
 ROUTER3: -
-Router>enable
-Router#configure terminal
-Router(config)#hostname Router3
-Router3(config)#enable secret besant
-Router3(config)#line console 0
-Router3(config-line)#exec-timeout 0 0
-Router3(config-line)#logg sync
-Router3(config-line)#pass cisco
-Router3(config-line)#login
-Router3(config-line)#exit
-Router3(config)#line vty 0 4
-Router3(config-line)#pass ccna
-Router3(config-line)#login
-Router3(config-line)#exit
-Router3(config)#interface f0/0
-Router3(config-if)#ip address 100.100.100.1 255.255.255.252
-Router3(config-if)#no shutdown
-Router3(config-if)#exit
-Router3(config)#interface f0/1
-Router3(config-if)#ip address 50.50.50.1 255.255.255.252
-Router3(config-if)#no shutdown
-Router3(config-if)#exit
-Router3(config)#ip dhcp excluded-address 50.50.50.1
-Router3(config)#ip dhcp pool LAN3
-Router3(dhcp-config)#network 50.50.50.0 255.255.255.252
-Router3(dhcp-config)#default-router 50.50.50.1
-Router3(dhcp-config)#exit
+
+	Router>enable
+	Router#configure terminal
+	Router(config)#hostname Router3
+	Router3(config)#enable secret besant
+	Router3(config)#line console 0
+	Router3(config-line)#exec-timeout 0 0
+	Router3(config-line)#logg sync
+	Router3(config-line)#pass cisco
+	Router3(config-line)#login
+	Router3(config-line)#exit
+	Router3(config)#line vty 0 4
+	Router3(config-line)#pass ccna
+	Router3(config-line)#login
+	Router3(config-line)#exit
+	Router3(config)#interface f0/0
+	Router3(config-if)#ip address 100.100.100.1 255.255.255.252
+	Router3(config-if)#no shutdown
+	Router3(config-if)#exit
+	Router3(config)#interface f0/1
+	Router3(config-if)#ip address 50.50.50.1 255.255.255.252
+	Router3(config-if)#no shutdown
+	Router3(config-if)#exit
+	Router3(config)#ip dhcp excluded-address 50.50.50.1
+	Router3(config)#ip dhcp pool LAN3
+	Router3(dhcp-config)#network 50.50.50.0 255.255.255.252
+	Router3(dhcp-config)#default-router 50.50.50.1
+	Router3(dhcp-config)#exit
 
 
 
