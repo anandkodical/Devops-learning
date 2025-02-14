@@ -1,1 +1,20 @@
+**IAM Roles Service to Service (To provide s3 bucket access through EC2 instance)**
+
+Purpose: To give temporary access to AWS service to users without creating IAM users. This will not require username and password. This uses STS(security token service)
+
+Steps: 
+
+  1. Go to Roles -> Create role -> AWS Service -> Use case=EC2-> Next-> Now provide permission for service (ex s3 full) -> Create role
+
+  2. Open the created role -> under trust relationship we can see the JSON where mentioned as principal and we can set the timing as 1hr, 2hrs.
+
+  3. Now we have given the access to S3 bucket through EC2 instace (Users having access to EC2 instance, they will get S3 access). 
+      For this we need to attach the role to EC2.
+
+  4. Go to EC2 section and select the instance.
+
+  5. Click on Actions -> Security -> Modify IAM role -> select the role -> update IAM role.
+
+  6. Now connect the EC2 instance and check for S3 bucket actions.
+
 
