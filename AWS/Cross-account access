@@ -1,1 +1,22 @@
+** Cross Account (Accessing other users AWS account being in own account) **
+
+Purpose : Accessing the other users AWS console without having the IAM user in his account. 
+Ex: IAM user of Account1 should access EC2 service of Account2 without having IAM user on Account2.
+
+Steps: 
+
+  1. Account 1: Attach STS policy to IAM user:
+
+      a. Go to IAM -> Click on User -> Permission tab -> Add permission -> Create Inline Policy -> Select 'STS' service -> select All actions and allow all resources -> Next -> Create policy.  
+
+  2. Account2: Create role and mention Account1 detail
+
+      a. Go to Roles -> Create Role -> AWS Account -> Another AWS account -> update Account number -> Select permission -> Next -> Create role (save role name).
+
+  3. Login to IAM of Account1.
+
+  4. Click on profile icon -> Switch role -> Provide Account2 details -> Switch role.
+
+Note: If you wish to permit only specific user to access the EC2 then, add ARN of the user in Account2 policy under trust relationship.
+
 
