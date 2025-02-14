@@ -1,16 +1,16 @@
 ** VPC Configuration **
 
-Project Goals
+Project Goals : 
 
-  Create a VPC with custom IP ranges.
+  => Create a VPC with custom IP ranges.
 
-  Configure public and private subnets.
+  => Configure public and private subnets.
 
-  Set up Internet Gateway (IGW) and NAT Gateway for internet access.
+  => Set up Internet Gateway (IGW) and NAT Gateway for internet access.
 
-  Implement Route Tables to control network traffic.
+  => Implement Route Tables to control network traffic.
 
-  Deploy EC2 instances in both subnets.
+  => Deploy EC2 instances in both subnets.
 
 
 Steps:
@@ -27,38 +27,27 @@ Steps:
 
   3. Configure Internet Gateway
 
-      a. Create an Internet Gateway (IGW) to the VPC.
+      a. Create an Internet Gateway (IGW) to the VPC
 
       b. Modify the public subnet’s Route Table to route internet-bound traffic via the IGW
 
       c. Set up a NAT Gateway in the public subnet to allow outbound internet access for instances in the private subnet
 
+
   4. Configure Route Tables
  
-      a. Public Route Table
+      a. Create Public Route Table
 
-      b. Routes local traffic within VPC
+      b. Attach Public Subnet and Internet Gateway (IGW) to make server as public
 
-      c. Routes internet traffic via IGW
+      c. Attach Private subnet and NAT gateway to make server as public
   
-      d. Private Route Table
-
-      e. Routes local traffic within VPC
-
-      f. Routes internet-bound traffic via NAT Gateway (for updates, API calls)
-
-  5. Create and Configure Security Groups
-
-      a. Public Instance Security Group
-
-      b. Allows SSH (22), HTTP (80), and HTTPS (443) from the internet
-
-      c. Private Instance Security Group
-
-      d. Allows only internal communication (e.g., from the web server to the database)
+      
 
   6. Deploy EC2 Instances
 
-      a. Deploy a web server (Apache/Nginx) in the public subnet.
+      a. Deploy a EC2 instance under public subnet and access via terminal
 
-      b. Deploy a database server (MySQL/PostgreSQL) in the private subnet.
+      b. Deploy a EC2 instance under private subnet and connect through public subnet
+
+      c. Download packages from private subnet to ensure internet connection is proper
