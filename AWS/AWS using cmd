@@ -1,1 +1,15 @@
+** Access AWS console using local command line **
 
+Pre-requisites: AWS CLI package
+
+Step 1: Create a Access key
+    1. Profile -> Security credentials -> Create access key -> Copy the Access key and Secret access key
+
+    2. Now open windows cmd
+
+    3. aws configure
+       Enter the access key and secret access key
+       Default region : ap-south-1
+       Output format : NR
+
+    4. Do aws s3 ls
