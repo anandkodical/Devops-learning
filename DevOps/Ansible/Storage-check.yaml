@@ -1,0 +1,97 @@
+---
+ - hosts: all
+   become: yes
+   tasks:
+     - name: Enter the partition name
+       pause:
+         prompt: "ENter the partition name"
+       register: part_name
+
+     - name: Displaying partition name
+       debug:
+         msg: "{{ part_name['user_input'] }}"       
+
+
+     - name: Capturing userinpuy
+       set_fact:
+           part_fin: "{{ part_name['user_input'] }}"
+
+     - name: displaying variable
+       debug:
+         msg: "{{ part_fin }}"      
+
+
+     - name: Executingcommand
+       shell:
+         "df -h {{ part_fin }}"
+       register: part_details
+
+
+     - name: displaying details
+       debug:
+         msg: "{{ part_details['stdout_lines'][1] }}"       
+
+
+     - name: Capturing details
+       set_fact:
+         sepe_de: "{{ part_details['stdout_lines'][1].strip().split(' ')|reject('match','^$') }}"
+
+     - name: Displaying details
+       debug:
+         msg: "{{ sepe_de }}"      
+
+
+     - name: Capturing tota,use,ava,usedper,mounted dir
+       set_fact:
+           filesys: "{{ sepe_de[0] }}"
+           to_sp: "{{ sepe_de[1] }}"
+           used_sp: "{{ sepe_de[2] }}"
+           ava_sp: "{{ sepe_de[3] }}"
+           use_per: "{{ sepe_de[4] }}"
+           us_per_nu: "{{ sepe_de[4].replace('%','') }}"
+           Mounte_de: "{{ sepe_de[-1] }}"
+
+     - name: Dusplayihgdetals of partition
+       debug:
+         msg: "File system is {{ filesys }}, Total space {{ to_sp }}, Used space is {{ used_sp }}, available space is {{ ava_sp }}, Used percentage is {{ use_per }}, MOUNTED directory is {{ Mounte_de }}"       
+          
+
+
+     - name:  Take threshold  input
+       pause:
+         prompt: "Enter the threshold "
+       register: thresh
+
+     - name: Capturing only threshol
+       set_fact:
+           ther_fin: "{{ thresh['user_input'] }}"
+
+     - name: displaying ther
+       debug:
+         msg: "{{ ther_fin|type_debug }}"      
+
+     - name: Checking the conditin if part % Below thre
+       debug:
+          msg: "Partition {{ filesys }}  Below Threshold {{ ther_fin }} % Actuall used percentage is {{ use_per }}"
+       when:
+         - us_per_nu|int < ther_fin|int
+
+     - name: Checking the conditin if part % excedd thre
+       debug:
+          msg: "Partition {{ filesys }}  exceeded Threshold {{ ther_fin }} % Actuall used percentage is {{ use_per }}"
+       when:
+         - us_per_nu|int > ther_fin|int
+
+
+     - name: Capturing Top 10 files whuch consumes
+       shell:
+          "find {{ part_fin }} -type f -printf '%s %p %u\n' |sort -k1 -nr | head"
+       register: top10files
+       when:
+        - us_per_nu|int > ther_fin|int
+
+     - name: Displaying Tip 10 files
+       debug:
+         msg: "{{ top10files['stdout_lines'] }}"
+       when:
+         - top10files is define
