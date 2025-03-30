@@ -16,4 +16,4 @@ elif [[ $col -eq 0 ]] && [[ $cog -eq 0 ]]
 then
 echo "Entered name is not user nor group"
 fi
-ggjgjgjg
+
