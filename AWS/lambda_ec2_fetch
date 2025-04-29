@@ -1,0 +1,30 @@
+import json
+import boto3
+runn_ins=[]
+stopp=[]
+def lambda_handler(event, context):
+
+    ec2call=boto3.client('ec2')
+#print (dir(ec2call))
+    fetchdetails=ec2call.describe_instances()
+    com_ins_deta=fetchdetails['Reservations']
+#print (com_ins_deta)
+    co_ins=len(com_ins_deta)
+    for i in range(0,co_ins,1):
+#    print (com_ins_deta[i]['Instances'][0])
+#    print (com_ins_deta[i]['Instances'][0].keys())
+        inst_id=com_ins_deta[i]['Instances'][0]['InstanceId']
+        imageid=com_ins_deta[i]['Instances'][0]['ImageId']
+        vpcid=com_ins_deta[i]['Instances'][0]['VpcId']
+        inst_stat=com_ins_deta[i]['Instances'][0]['State']['Name']
+        print ("Below are details of instance {0}\nInstance id ={0}\nImageid={1}\nvpcid={2}\nInstance_state={3}".format(inst_id,imageid,vpcid,inst_stat))
+        if (inst_stat=="running"):
+            runn_ins.append(inst_id)
+        elif (inst_stat == "stopped"):
+            stopp.append(inst_id)
+        print ("========================================")    
+    print ("Below are running instances\n{0}Below are stopped instances\n{1}".format(runn_ins,stopp))
+
+
+
+    ec2call.start_instances(InstanceIds=stopp)
